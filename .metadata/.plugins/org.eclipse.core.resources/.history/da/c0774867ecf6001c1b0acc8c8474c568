@@ -1,0 +1,12 @@
+package it.disim.bpd;
+
+import org.springframework.stereotype.Component;
+
+@Component("farmRegistration")
+public class FarmRegistration {
+
+	public void request(){
+		
+	}
+	
+}

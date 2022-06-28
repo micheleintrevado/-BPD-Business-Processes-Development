@@ -1,0 +1,10 @@
+package it.disim.bpd;
+
+public class FarmRegistration implements JavaDelegate {
+
+	@Override
+	public void execute(DelegateExecution execution) throws Exception {
+
+	}
+
+}

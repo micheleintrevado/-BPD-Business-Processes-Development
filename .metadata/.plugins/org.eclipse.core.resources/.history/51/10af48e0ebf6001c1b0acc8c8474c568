@@ -1,0 +1,6 @@
+package it.disim.bpd;
+
+@Component("")
+public class FarmRegistration {
+
+}

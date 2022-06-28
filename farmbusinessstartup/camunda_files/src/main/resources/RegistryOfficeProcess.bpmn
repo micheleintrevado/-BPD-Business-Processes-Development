@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0n6ahc6" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+  <bpmn:process id="RegistryOfficeProcess" name="Registry Office Process" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_02dc6f8</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1y56zi9" />
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_02dc6f8" sourceRef="StartEvent_1" targetRef="RegisterFarm" />
+    <bpmn:sequenceFlow id="Flow_1q9ffni" sourceRef="RegisterFarm" targetRef="Gateway_0qg6k51" />
+    <bpmn:parallelGateway id="Gateway_0qg6k51">
+      <bpmn:incoming>Flow_1q9ffni</bpmn:incoming>
+      <bpmn:outgoing>Flow_03df2fr</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0hfi46n</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1euclsw</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_03df2fr" sourceRef="Gateway_0qg6k51" targetRef="SendFarmHealtcareRegistration" />
+    <bpmn:sequenceFlow id="Flow_0hfi46n" sourceRef="Gateway_0qg6k51" targetRef="SendBusinessStartupNotification" />
+    <bpmn:sequenceFlow id="Flow_1euclsw" sourceRef="Gateway_0qg6k51" targetRef="SendFarmBusinessCode" />
+    <bpmn:sequenceFlow id="Flow_0h3wm7j" sourceRef="SendBusinessStartupNotification" targetRef="Gateway_0hix8wg" />
+    <bpmn:sequenceFlow id="Flow_1yirjm8" sourceRef="SendFarmHealtcareRegistration" targetRef="Gateway_0hix8wg" />
+    <bpmn:sequenceFlow id="Flow_1sm89ht" sourceRef="SendFarmBusinessCode" targetRef="Gateway_0hix8wg" />
+    <bpmn:endEvent id="Event_1t6pmaa">
+      <bpmn:incoming>Flow_0cugq77</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0cugq77" sourceRef="Gateway_0hix8wg" targetRef="Event_1t6pmaa" />
+    <bpmn:serviceTask id="RegisterFarm" name="Register Farm">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">METTERE QUI NOME SERVIZIO</camunda:inputParameter>
+            <camunda:inputParameter name="method">GET</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="post">${response}</camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_02dc6f8</bpmn:incoming>
+      <bpmn:outgoing>Flow_1q9ffni</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sendTask id="SendFarmHealtcareRegistration" name="Send Farm Healtcare Registration">
+      <bpmn:incoming>Flow_03df2fr</bpmn:incoming>
+      <bpmn:outgoing>Flow_1yirjm8</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:sendTask id="SendBusinessStartupNotification" name="Send Business Startup Notification">
+      <bpmn:incoming>Flow_0hfi46n</bpmn:incoming>
+      <bpmn:outgoing>Flow_0h3wm7j</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:sendTask id="SendFarmBusinessCode" name="Send Farm Business Code">
+      <bpmn:incoming>Flow_1euclsw</bpmn:incoming>
+      <bpmn:outgoing>Flow_1sm89ht</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:parallelGateway id="Gateway_0hix8wg">
+      <bpmn:incoming>Flow_0h3wm7j</bpmn:incoming>
+      <bpmn:incoming>Flow_1yirjm8</bpmn:incoming>
+      <bpmn:incoming>Flow_1sm89ht</bpmn:incoming>
+      <bpmn:outgoing>Flow_0cugq77</bpmn:outgoing>
+    </bpmn:parallelGateway>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="RegistryOfficeProcess">
+      <bpmndi:BPMNEdge id="Flow_0cugq77_di" bpmnElement="Flow_0cugq77">
+        <di:waypoint x="735" y="230" />
+        <di:waypoint x="792" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1sm89ht_di" bpmnElement="Flow_1sm89ht">
+        <di:waypoint x="630" y="340" />
+        <di:waypoint x="710" y="340" />
+        <di:waypoint x="710" y="255" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1yirjm8_di" bpmnElement="Flow_1yirjm8">
+        <di:waypoint x="630" y="117" />
+        <di:waypoint x="710" y="117" />
+        <di:waypoint x="710" y="205" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0h3wm7j_di" bpmnElement="Flow_0h3wm7j">
+        <di:waypoint x="630" y="230" />
+        <di:waypoint x="685" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1euclsw_di" bpmnElement="Flow_1euclsw">
+        <di:waypoint x="450" y="142" />
+        <di:waypoint x="450" y="340" />
+        <di:waypoint x="530" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0hfi46n_di" bpmnElement="Flow_0hfi46n">
+        <di:waypoint x="450" y="142" />
+        <di:waypoint x="450" y="230" />
+        <di:waypoint x="530" y="230" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03df2fr_di" bpmnElement="Flow_03df2fr">
+        <di:waypoint x="475" y="117" />
+        <di:waypoint x="530" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1q9ffni_di" bpmnElement="Flow_1q9ffni">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="425" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02dc6f8_di" bpmnElement="Flow_02dc6f8">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_0kiunyv_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_19789qx_di" bpmnElement="Gateway_0qg6k51">
+        <dc:Bounds x="425" y="92" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1t6pmaa_di" bpmnElement="Event_1t6pmaa">
+        <dc:Bounds x="792" y="212" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1k0h7gx_di" bpmnElement="RegisterFarm">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_06zo1yd_di" bpmnElement="SendFarmHealtcareRegistration">
+        <dc:Bounds x="530" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_17s8nup_di" bpmnElement="SendBusinessStartupNotification">
+        <dc:Bounds x="530" y="190" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_184qyie_di" bpmnElement="SendFarmBusinessCode">
+        <dc:Bounds x="530" y="300" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0ozo1jb_di" bpmnElement="Gateway_0hix8wg">
+        <dc:Bounds x="685" y="205" width="50" height="50" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
