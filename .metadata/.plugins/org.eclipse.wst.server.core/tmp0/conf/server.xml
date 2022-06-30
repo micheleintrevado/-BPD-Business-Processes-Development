@@ -149,7 +149,9 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\miche\Desktop\BPD-Business-Processes-Development\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/></Host>
+      <Context docBase="C:\Users\miche\Desktop\BPD\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context antiJARLocking="true" docBase="C:\Users\miche\Desktop\BPD\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\VeterinaryRegionalRegister" path="/VeterinaryRegionalRegister" reloadable="true" source="org.eclipse.jst.jee.server:VeterinaryRegionalRegister">
+</Context><Context antiJARLocking="true" docBase="C:\Users\miche\Desktop\BPD\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Municipality" path="/Municipality" reloadable="true" source="org.eclipse.jst.jee.server:Municipality">
+</Context></Host>
     </Engine>
   </Service>
 </Server>

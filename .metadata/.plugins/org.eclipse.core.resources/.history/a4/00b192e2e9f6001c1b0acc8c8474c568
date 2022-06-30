@@ -1,8 +1,0 @@
-package it.disim.bpd;
-
-import org.springframework.boot.SpringApplication;
-
-@SpringBootApplication
-public class Application {
-
-}
