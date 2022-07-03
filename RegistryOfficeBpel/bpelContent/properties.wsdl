@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://RegistryOfficeBpelService.asose.disim.univaq.it/properties"
+	xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	name="properties" targetNamespace="http://RegistryOfficeBpelService.asose.disim.univaq.it/properties">
+	<vprop:property name="ChoreographyID" type="xsd:string" />
+</definitions>

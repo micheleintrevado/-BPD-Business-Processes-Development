@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:LHCBpelService.asose.disim.univaq.it="http://LHCBpelService.asose.disim.univaq.it/" xmlns:RegistryOfficeBpelService.asose.disim.univaq.it="http://RegistryOfficeBpelService.asose.disim.univaq.it/" xmlns:VeterinaryBpelService.asose.disim.univaq.it="http://VeterinaryBpelService.asose.disim.univaq.it/" xmlns:municipality="http://eu.chorevolution.farmbusinessstartup/services/municipality" xmlns:registryoffice="http://eu.chorevolution.farmbusinessstartup/registryoffice" xmlns:veterinaryregionalregister="http://eu.chorevolution.farmbusinessstartup/services/veterinaryregionalregister">
+  <process name="RegistryOfficeBpelService.asose.disim.univaq.it:RegistryOfficeBpel.bpel">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="LHCBpel">
+      <service name="RegistryOfficeBpelService.asose.disim.univaq.it:RegistryOfficeBpelService" port="RegistryOfficeBpelServicePort"/>
+    </provide>
+    <invoke partnerLink="ROLogic">
+      <service name="registryoffice:RegistryOfficeService" port="RegistryOfficePort"/>
+    </invoke>
+    <invoke partnerLink="VRR">
+      <service name="veterinaryregionalregister:VeterinaryRegionalRegisterService" port="VeterinaryRegionalRegisterPort"/>
+    </invoke>
+    <invoke partnerLink="Municipality">
+      <service name="municipality:MunicipalityService" port="MunicipalityPort"/>
+    </invoke>
+    <invoke partnerLink="VBpel">
+      <service name="VeterinaryBpelService.asose.disim.univaq.it:VeterinaryBpelService" port="VeterinaryBpelServicePort"/>
+    </invoke>
+    <invoke partnerLink="LHCBpel">
+      <service name="LHCBpelService.asose.disim.univaq.it:LHCBpelService" port="LHCBpelServicePort"/>
+    </invoke>
+  </process>
+</deploy>

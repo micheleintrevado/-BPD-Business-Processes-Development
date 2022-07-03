@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns:tns="http://RegistryOfficeBpelService.asose.disim.univaq.it/" 
+	targetNamespace="http://RegistryOfficeBpelService.asose.disim.univaq.it/Artifacts" 
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:ro="http://eu.chorevolution.farmbusinessstartup/registryoffice"
+	xmlns:lhc="http://LHCBpelService.asose.disim.univaq.it/"
+	xmlns:vrr="http://eu.chorevolution.farmbusinessstartup/services/veterinaryregionalregister"
+	xmlns:m="http://eu.chorevolution.farmbusinessstartup/services/municipality"
+	xmlns:v="http://VeterinaryBpelService.asose.disim.univaq.it/">
+	
+  <partnerLinkType name="LHCBpelPLT" xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+    <role name="LHCRORole" portType="lhc:LHCBpel"/>
+    <role name="RegistryOfficeRole" portType="tns:RegistryOfficeBpel"/>
+  </partnerLinkType>
+  
+  <partnerLinkType name="ROLogicPLT" xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+    <role name="ROLogicRole" portType="ro:RegistryOfficePT"/>
+  </partnerLinkType>
+  
+  <partnerLinkType name="VRRPLT" xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+    <role name="VRRRole" portType="vrr:VeterinaryRegionalRegisterPT"/>
+  </partnerLinkType>
+  
+  <partnerLinkType name="MPLT" xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+    <role name="MunicipalityRole" portType="m:MunicipalityPT"/>
+  </partnerLinkType>
+  
+  <partnerLinkType name="VBpelPLT" xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+    <role name="VeterinaryBpelRole" portType="v:VeterinaryBpel"/>
+  </partnerLinkType>
+  
+  <import location="RegistryOfficeBpel.wsdl" namespace="http://RegistryOfficeBpelService.asose.disim.univaq.it/"/>
+  <import location="RegistryOffice.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/registryoffice"/>
+  <import location="LHCBpel.wsdl" namespace="http://LHCBpelService.asose.disim.univaq.it/"/>
+  <import location="VeterinaryRegionalRegister.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/services/veterinaryregionalregister"/>
+  <import location="VeterinaryBpel.wsdl" namespace="http://VeterinaryBpelService.asose.disim.univaq.it/"/>
+  <import location="Municipality.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/services/municipality"/>
+</definitions>
