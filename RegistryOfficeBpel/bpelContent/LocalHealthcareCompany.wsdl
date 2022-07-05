@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions name="UserBpelService" 
-	targetNamespace="http://UserBpelService.asose.disim.univaq.it/" 
+<wsdl:definitions name="LocalHealthcareCompanyService" 
+	targetNamespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" 
 	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
-	xmlns:tns="http://UserBpelService.asose.disim.univaq.it/" 
+	xmlns:tns="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" 
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+	
   <wsdl:types>
     <xs:schema elementFormDefault="unqualified" 
-    targetNamespace="http://UserBpelService.asose.disim.univaq.it/" version="1.0" 
-    xmlns:tns="http://UserBpelService.asose.disim.univaq.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    targetNamespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" version="1.0" 
+    xmlns:tns="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
- <xs:element name="farmBusinessStartupRequest" type="tns:farmBusinessStartupRequest"/>
+  <xs:element name="farmBusinessStartupRequest" type="tns:farmBusinessStartupRequest"/>
 
   <xs:element name="farmBusinessStartupResponse" type="tns:farmBusinessStartupResponse"/>
+  
+  <xs:element name="farmSiteInspectionResponse" type="tns:farmSiteInspectionResponse"/>
+  
+  <xs:element name="farmRegistrationNotification" type="tns:farmRegistrationNotification"/>
+   <xsd:complexType name="farmRegistrationNotification">
+		<xsd:sequence>	
+            <xsd:element name="ChoreographyID" type="xsd:string"/>  
+            <xsd:element name="farmRegistrationNotificationDetails" type="tns:farmRegistrationNotificationDetails"/>                                 	          							
+		</xsd:sequence>
+	</xsd:complexType>	
+  
+  
+  <xsd:complexType name="farmRegistrationNotificationDetails">
+		<xsd:sequence>	
+            <xsd:element name="farmCode" type="xsd:string"/>  
+            <xsd:element name="farmName" type="xsd:string"/> 
+			<xsd:element name="siteAddress" type="tns:addressDetails"/>  
+	        <xsd:element name="farmSurface" type="xsd:int"/> 			           
+            <xsd:element name="productionType" type="tns:productionTypology"/>
+            <xsd:element name="breedingMethodologyType" type="tns:breedingMethodTypology"/>                                 	          							
+		</xsd:sequence>
+	</xsd:complexType>	
 
   <xsd:complexType name="farmBusinessStartupRequest">
 		<xsd:sequence>
+			<xsd:element name="ChoreographyID" type="xsd:string"/>
 			<xsd:element name="farmBusinessStartupRequestForm" type="tns:farmBusinessStartupRequestFormDetails"/>									
 		</xsd:sequence>
 	</xsd:complexType>
@@ -88,57 +112,87 @@
 	
 	<xsd:complexType name="farmBusinessStartupResponse">
 		<xsd:sequence>
-			<xsd:element name="ChoreographyID" type="xsd:string"/>
             <xsd:element name="farmCode" type="xsd:string"/>  									
 		</xsd:sequence>
 	</xsd:complexType>
-</xs:schema>
-  </wsdl:types>
+	
+	<xsd:complexType name="farmSiteInspectionResponse">
+		<xsd:sequence>
+			<xsd:element name="ChoreographyID" type="xsd:string"></xsd:element>
+            <xsd:element name="siteInspectionVerbal" type="tns:veterinarySiteInspectionDetails"/>              							
+		</xsd:sequence>
+	</xsd:complexType>		
+	
+	<xsd:complexType name="veterinarySiteInspectionDetails">
+		<xsd:sequence>
+            <xsd:element name="veterinaryName" type="xsd:string"/>   
+            <xsd:element name="veterinarySurname" type="xsd:string"/>       	
+			<xsd:element name="siteAddress" type="tns:addressDetails"/>
+	        <xsd:element name="farmSurface" type="xsd:int"/> 		 	
+			<xsd:element name="productionType" type="tns:productionTypology"/>
+            <xsd:element name="breedingMethodologyType" type="tns:breedingMethodTypology"/> 
+            <xsd:element name="siteInspectionDate" type="xsd:date"/>   
+	        <xsd:element name="referenceLegislation" type="xsd:string"/>             							
+		</xsd:sequence>
+	</xsd:complexType>	
+	</xs:schema>
+</wsdl:types>
   
   <wsdl:message name="farmBusinessStartupRequest">
     <wsdl:part name="parameters" element="tns:farmBusinessStartupRequest">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="farmBusinessStartupResponse">
-    <wsdl:part name="parameters" element="tns:farmBusinessStartupResponse">
+  
+   <wsdl:message name="farmSiteInspectionResponse">
+    <wsdl:part name="parameters" element="tns:farmSiteInspectionResponse">
     </wsdl:part>
   </wsdl:message>
   
-  <wsdl:portType name="UserBpel">
+  <wsdl:message name="farmRegistrationNotification">
+    <wsdl:part name="parameters" element="tns:farmRegistrationNotification">
+    </wsdl:part>
+  </wsdl:message>
+    
+  <wsdl:portType name="LocalHealthcareCompany">
     <wsdl:operation name="FarmBusinessCodeRequest">
       <wsdl:input name="farmBusinessStartupRequest" message="tns:farmBusinessStartupRequest">
     </wsdl:input>
-      <wsdl:output name="farmBusinessStartupResponse" message="tns:farmBusinessStartupResponse">
-    </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="FarmBusinessCodeCallback">
-      <wsdl:input name="farmBusinessStartupCallback" message="tns:farmBusinessStartupResponse">
+    <wsdl:operation name="FarmSiteInspectionVerbal">
+      <wsdl:input name="farmSiteInspectionResponse" message="tns:farmSiteInspectionResponse">
+    </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="FarmBusinessStartupNotification">
+      <wsdl:input name="farmRegistrationNotification" message="tns:farmRegistrationNotification">
     </wsdl:input>
     </wsdl:operation>
   </wsdl:portType>
   
-  <wsdl:binding name="UserBpelServiceSoapBinding" type="tns:UserBpel">
+  <wsdl:binding name="LocalHealthcareCompanyServiceSoapBinding" type="tns:LocalHealthcareCompany">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="FarmBusinessCodeRequest">
       <soap:operation soapAction="" style="document"/>
       <wsdl:input name="farmBusinessStartupRequest">
         <soap:body use="literal"/>
       </wsdl:input>
-      <wsdl:output name="farmBusinessStartupResponse">
-        <soap:body use="literal"/>
-      </wsdl:output>
     </wsdl:operation>
-     <wsdl:operation name="FarmBusinessCodeCallback">
+    <wsdl:operation name="FarmSiteInspectionVerbal">
       <soap:operation soapAction="" style="document"/>
-      <wsdl:input name="farmBusinessStartupCallback">
+      <wsdl:input name="farmSiteInspectionResponse">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="FarmBusinessStartupNotification">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="farmRegistrationNotification">
         <soap:body use="literal"/>
       </wsdl:input>
     </wsdl:operation>
   </wsdl:binding>
   
-  <wsdl:service name="UserBpelService">
-    <wsdl:port name="UserBpelServicePort" binding="tns:UserBpelServiceSoapBinding">
-      <soap:address location="http://localhost:8080/ode/processes/UserBpelService"/>
+  <wsdl:service name="LocalHealthcareCompanyService">
+    <wsdl:port name="LocalHealthcareCompanyServicePort" binding="tns:LocalHealthcareCompanyServiceSoapBinding">
+      <soap:address location="http://localhost:8080/ode/processes/LocalHealthcareCompanyService"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions name="VeterinaryBpelService" 
-	targetNamespace="http://VeterinaryBpelService.asose.disim.univaq.it/" 
+<wsdl:definitions name="VeterinaryService" 
+	targetNamespace="http://eu.chorevolution.farmbusinessstartup/veterinary"
 	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
-	xmlns:tns="http://VeterinaryBpelService.asose.disim.univaq.it/" 
+	xmlns:tns="http://eu.chorevolution.farmbusinessstartup/veterinary"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
 	
   <wsdl:types>
     <xs:schema elementFormDefault="unqualified" 
-    targetNamespace="http://VeterinaryBpelService.asose.disim.univaq.it/" version="1.0" 
-    xmlns:tns="http://VeterinaryBpelService.asose.disim.univaq.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    targetNamespace="http://eu.chorevolution.farmbusinessstartup/veterinary" 
+    version="1.0" 
+    xmlns:tns="http://eu.chorevolution.farmbusinessstartup/veterinary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:element name="farmSiteInspectionRequest" type="tns:farmSiteInspectionRequest"/>
 
@@ -120,7 +121,7 @@
     </wsdl:part>
   </wsdl:message>
   
-  <wsdl:portType name="VeterinaryBpel">
+  <wsdl:portType name="Veterinary">
     <wsdl:operation name="FarmOpeningSiteInspectionRequest">
       <wsdl:input name="farmSiteInspectionRequest" message="tns:farmSiteInspectionRequest">
     </wsdl:input>
@@ -131,7 +132,7 @@
     </wsdl:operation>
   </wsdl:portType>
   
-  <wsdl:binding name="VeterinaryBpelServiceSoapBinding" type="tns:VeterinaryBpel">
+  <wsdl:binding name="VeterinaryServiceSoapBinding" type="tns:Veterinary">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="FarmOpeningSiteInspectionRequest">
       <soap:operation soapAction="" style="document"/>
@@ -147,9 +148,9 @@
     </wsdl:operation>
   </wsdl:binding>
   
-  <wsdl:service name="VeterinaryBpelService">
-    <wsdl:port name="VeterinaryBpelServicePort" binding="tns:VeterinaryBpelServiceSoapBinding">
-      <soap:address location="http://localhost:8080/ode/processes/VeterinaryBpelService"/>
+  <wsdl:service name="VeterinaryService">
+    <wsdl:port name="VeterinaryServicePort" binding="tns:VeterinaryServiceSoapBinding">
+      <soap:address location="http://localhost:8080/ode/processes/VeterinaryService"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

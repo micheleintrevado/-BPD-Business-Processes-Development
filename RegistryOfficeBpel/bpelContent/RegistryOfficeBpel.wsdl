@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdl:definitions name="RegistryOfficeBpelService" 
-	targetNamespace="http://RegistryOfficeBpelService.asose.disim.univaq.it/" 
+	targetNamespace="http://RegistryOfficeBpelService.bpd.disim.univaq.it/" 
 	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
-	xmlns:tns="http://RegistryOfficeBpelService.asose.disim.univaq.it/" 
+	xmlns:tns="http://RegistryOfficeBpelService.bpd.disim.univaq.it/" 
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
 	
   <wsdl:types>
     <xs:schema elementFormDefault="unqualified" 
-    targetNamespace="http://RegistryOfficeBpelService.asose.disim.univaq.it/" version="1.0" 
-    xmlns:tns="http://RegistryOfficeBpelService.asose.disim.univaq.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    targetNamespace="http://RegistryOfficeBpelService.bpd.disim.univaq.it/" version="1.0" 
+    xmlns:tns="http://RegistryOfficeBpelService.bpd.disim.univaq.it/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:element name="farmOpeningNotification" type="tns:farmOpeningNotification"/>
   
