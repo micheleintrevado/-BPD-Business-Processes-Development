@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;it.disim.bpd.camundaDelegates.RegisterFarM.java&apos; to &apos;RegisterFarm.java&apos;&#x0D;&#x0A;- Original project: &apos;CamundaDelegates&apos;&#x0D;&#x0A;- Original element: &apos;it.disim.bpd.camundaDelegates.RegisterFarM.java&apos;&#x0D;&#x0A;- Renamed element: &apos;it.disim.bpd.camundaDelegates.RegisterFarm.java&apos;" description="Rename compilation unit &apos;RegisterFarM.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;it.disim.bpd.camundaDelegates{RegisterFarM.java" name="RegisterFarm.java" references="false" stamp="1656257914065" version="1.0"/>
-</session>
