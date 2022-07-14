@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/cdlocalhealthcarecompany" xmlns:properties="http://eu.chorevolution.farmbusinessstartup/properties" xmlns:tns="http://eu.chorevolution.farmbusinessstartup/propertiesAliases" xmlns:veterinary="http://eu.chorevolution.farmbusinessstartup/cdveterinary" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="propertiesAliases" targetNamespace="http://eu.chorevolution.farmbusinessstartup/propertiesAliases">
+  <import location="cdVeterinary.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cdveterinary"/>
+  <import location="localhealthcarecompany.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cdlocalhealthcarecompany"/>
+  <vprop:propertyAlias messageType="veterinary:farmSiteInspectionRequestMessageRequest" part="parameters" propertyName="properties:chorID">
+    <vprop:query>choreographyId/choreographyId</vprop:query>
+  </vprop:propertyAlias>
+  <vprop:propertyAlias messageType="veterinary:farmRegistrationNotificationMessageRequest" part="parameters" propertyName="properties:chorID">
+    <vprop:query>choreographyId/choreographyId</vprop:query>
+  </vprop:propertyAlias>
+  <vprop:propertyAlias messageType="localhealthcarecompany:farmSiteInspectionResponseMessageRequest" part="parameters" propertyName="properties:chorID">
+    <vprop:query>choreographyId/choreographyId</vprop:query>
+  </vprop:propertyAlias>
+</definitions>
