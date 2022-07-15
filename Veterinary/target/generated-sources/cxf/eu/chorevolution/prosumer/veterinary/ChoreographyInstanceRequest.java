@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per choreographyInstanceRequest complex type.
+ * <p>Java class for choreographyInstanceRequest complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="choreographyInstanceRequest"&gt;
@@ -36,7 +36,7 @@ public class ChoreographyInstanceRequest {
     protected String choreographyId;
 
     /**
-     * Recupera il valore della proprietà choreographyId.
+     * Gets the value of the choreographyId property.
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class ChoreographyInstanceRequest {
     }
 
     /**
-     * Imposta il valore della proprietà choreographyId.
+     * Sets the value of the choreographyId property.
      * 
      * @param value
      *     allowed object is

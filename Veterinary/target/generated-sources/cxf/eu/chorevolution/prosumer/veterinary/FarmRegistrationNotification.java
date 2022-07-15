@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per farmRegistrationNotification complex type.
+ * <p>Java class for farmRegistrationNotification complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="farmRegistrationNotification"&gt;
@@ -58,7 +58,7 @@ public class FarmRegistrationNotification {
     protected BreedingMethodTypology breedingMethodologyType;
 
     /**
-     * Recupera il valore della proprietà farmCode.
+     * Gets the value of the farmCode property.
      * 
      * @return
      *     possible object is
@@ -70,7 +70,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Imposta il valore della proprietà farmCode.
+     * Sets the value of the farmCode property.
      * 
      * @param value
      *     allowed object is
@@ -82,7 +82,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Recupera il valore della proprietà farmName.
+     * Gets the value of the farmName property.
      * 
      * @return
      *     possible object is
@@ -94,7 +94,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Imposta il valore della proprietà farmName.
+     * Sets the value of the farmName property.
      * 
      * @param value
      *     allowed object is
@@ -106,7 +106,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Recupera il valore della proprietà siteAddress.
+     * Gets the value of the siteAddress property.
      * 
      * @return
      *     possible object is
@@ -118,7 +118,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Imposta il valore della proprietà siteAddress.
+     * Sets the value of the siteAddress property.
      * 
      * @param value
      *     allowed object is
@@ -130,7 +130,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Recupera il valore della proprietà farmSurface.
+     * Gets the value of the farmSurface property.
      * 
      */
     public int getFarmSurface() {
@@ -138,7 +138,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Imposta il valore della proprietà farmSurface.
+     * Sets the value of the farmSurface property.
      * 
      */
     public void setFarmSurface(int value) {
@@ -146,7 +146,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Recupera il valore della proprietà productionType.
+     * Gets the value of the productionType property.
      * 
      * @return
      *     possible object is
@@ -158,7 +158,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Imposta il valore della proprietà productionType.
+     * Sets the value of the productionType property.
      * 
      * @param value
      *     allowed object is
@@ -170,7 +170,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Recupera il valore della proprietà breedingMethodologyType.
+     * Gets the value of the breedingMethodologyType property.
      * 
      * @return
      *     possible object is
@@ -182,7 +182,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Imposta il valore della proprietà breedingMethodologyType.
+     * Sets the value of the breedingMethodologyType property.
      * 
      * @param value
      *     allowed object is
