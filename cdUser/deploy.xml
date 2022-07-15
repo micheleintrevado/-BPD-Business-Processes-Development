@@ -10,7 +10,7 @@
     <provide partnerLink="localhealthcarecompany">
       <service name="cduser:LocalHealthcareCompanyUserService" port="LocalHealthcareCompanyUserPort"/>
     </provide>
-    <invoke partnerLink="UserLocalHealthcareCompanyPT" usePeer2Peer="false">
+    <invoke partnerLink="UserLocalHealthcareCompanyPT" >
       <service name="localhealthcarecompany:UserLocalHealthcareCompanyService" port="UserLocalHealthcareCompanyPort"/>
     </invoke>
   </process>

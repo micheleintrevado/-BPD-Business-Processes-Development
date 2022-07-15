@@ -8,7 +8,7 @@
 	<name>RegistryOffice</name>
 	<url>http://www.chorevolution.eu</url>
 	<properties>
-		<cxf.version>3.1.6</cxf.version>
+		<cxf.version>3.4.3</cxf.version>
 		<cxf.xjc-utils.version>3.0.5</cxf.xjc-utils.version>
 		<spring.version>4.2.5.RELEASE</spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

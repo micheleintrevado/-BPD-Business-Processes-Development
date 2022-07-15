@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="it.univaq.disim.bpd.VeterinaryBPEL" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://it.univaq.disim.bpd.LocalHealthcareCompanyBPEL" xmlns:wsdl1="http://it.univaq.disim.bpd.VeterinaryBPEL" xmlns:wsdl2="http://eu.chorevolution.farmbusinessstartup/veterinary" xmlns:wsdl3="http://it.univaq.disim.bpd.RegistryOfficeBPEL" name="VeterinaryBPEL" targetNamespace="it.univaq.disim.bpd.VeterinaryBPEL">
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     SERVICE DEFINITION - A service groups a set of ports into
+     a service unit.
+     Gianluca Rea
+     Michele Intrevado
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <plnk:partnerLinkType name="LocalHealthcareCompanyPlType">
+    <plnk:role name="LocalHealthcareCompanyRole" portType="wsdl:LocalHealthcareCompanyBpel"/>
+    <plnk:role name="VeterinaryRole" portType="wsdl1:VeterinaryBpel"/>
+  </plnk:partnerLinkType>
+    <plnk:partnerLinkType name="VeterinaryPlType">
+    <plnk:role name="VeterinaryRole" portType="wsdl2:VeterinaryPT"/>
+  </plnk:partnerLinkType>
+    <plnk:partnerLinkType name="RegistryOfficePlType">
+    <plnk:role name="VeterinaryRole" portType="wsdl1:VeterinaryBpel"/>
+    <plnk:role name="RegistryOfficeRole" portType="wsdl3:RegistryOfficeBpel"/>
+  </plnk:partnerLinkType>
+    <import location="LocalHealthcareCompanyBPEL.wsdl" namespace="http://it.univaq.disim.bpd.LocalHealthcareCompanyBPEL"/>
+    <import location="VeterinaryBPEL.wsdl" namespace="http://it.univaq.disim.bpd.VeterinaryBPEL"/>
+    <import location="Veterinary.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/veterinary"/>
+    <import location="RegistryOfficeBPEL.wsdl" namespace="http://it.univaq.disim.bpd.RegistryOfficeBPEL"/>
+    <service name="VeterinaryBPELService">
+    </service>
+</definitions>
