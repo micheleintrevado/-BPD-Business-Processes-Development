@@ -9,8 +9,8 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 
 import it.univaq.disim.bpd.domain.FarmBusinessStartupRequest;
-import it.univaq.disim.bpd.domain.FarmSiteInspectionResponse;
 import it.univaq.disim.bpd.domain.FarmRegistrationNotification;
+import it.univaq.disim.bpd.domain.FarmSiteInspectionRequest;
 
 @Endpoint
 public class LocalHealthcareCompanyEndpoint {
@@ -25,24 +25,20 @@ public class LocalHealthcareCompanyEndpoint {
 		
 		System.out.println("Received SOAP message farmBusinessStartupRequest");
 		
-		String businessKey = generateRandBusinessKey();
-
 		runtimeService.createMessageCorrelation("farmBusinessStartupRequest")
-				.processInstanceBusinessKey(businessKey)
+				.processInstanceBusinessKey(request.getRequestId())
 				.setVariable("farmBusinessStartupRequest", request)
 				.correlate();
 
 	}
 	
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "farmSiteInspectionResponse")
-	public void receiveFarmSiteInspection(@RequestPayload FarmSiteInspectionResponse request) {
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "farmSiteInspectionRequest")
+	public void receiveFarmSiteInspectionVerbal(@RequestPayload FarmSiteInspectionRequest request) {
 		
 		System.out.println("Received SOAP message farmSiteInspectionResponse");
 		
-		String businessKey = generateRandBusinessKey();
-
 		runtimeService.createMessageCorrelation("farmSiteInspectionResponse")
-				.processInstanceBusinessKey(businessKey)
+				.processInstanceBusinessKey(request.getRequestId())
 				.setVariable("farmSiteInspectionResponse", request)
 				.correlate();
 
