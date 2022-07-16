@@ -2,70 +2,19 @@
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1wrndud" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.0.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <bpmn:process id="Process_173o0bd" name="LocalHealthcareCompany" isExecutable="true">
     <bpmn:sequenceFlow id="Flow_0kcsa2u" sourceRef="StartEvent_1" targetRef="Activity_0b2gfkl" />
-    <bpmn:sequenceFlow id="Flow_0yukcau" sourceRef="Activity_0b2gfkl" targetRef="Activity_1l9hqwy" />
     <bpmn:sequenceFlow id="Flow_0vcmoos" sourceRef="Activity_1l9hqwy" targetRef="Activity_1e1xjp2" />
-    <bpmn:sequenceFlow id="Flow_18p8ga7" sourceRef="Activity_1e1xjp2" targetRef="Activity_0paq8k8" />
     <bpmn:sequenceFlow id="Flow_1gv08c3" sourceRef="Activity_0paq8k8" targetRef="Activity_1sidxdw" />
     <bpmn:endEvent id="Event_1l74sb2">
       <bpmn:incoming>Flow_10g3zkl</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:sequenceFlow id="Flow_10g3zkl" sourceRef="Activity_1sidxdw" targetRef="Event_1l74sb2" />
     <bpmn:startEvent id="StartEvent_1" name="Farm Business Code Requested">
       <bpmn:outgoing>Flow_0kcsa2u</bpmn:outgoing>
       <bpmn:messageEventDefinition id="MessageEventDefinition_0ofidjy" messageRef="Message_2v1lt56" />
     </bpmn:startEvent>
-    <bpmn:sendTask id="Activity_0b2gfkl" name="Request Farm Opening Site Inspection">
-      <bpmn:extensionElements>
-        <camunda:connector>
-          <camunda:connectorId>soap-http-connector</camunda:connectorId>
-        </camunda:connector>
-        <camunda:inputOutput>
-          <camunda:inputParameter name="headers">
-            <camunda:map>
-              <camunda:entry key="Content-Type">application/soap+xml;charset=UTF-8;action=""</camunda:entry>
-            </camunda:map>
-          </camunda:inputParameter>
-          <camunda:inputParameter name="url">http://localhost:7070/Veterinary/Veterinary</camunda:inputParameter>
-          <camunda:inputParameter name="payload">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bpd="http://bpd.disim.univaq.it/"&gt;
- &lt;soapenv:Header/&gt;
-   &lt;soapenv:Body&gt;
-     &lt;bpd:op&gt;
-     &lt;/bpd:op&gt;
-   &lt;/soapenv:Body&gt;
-&lt;/soapenv:Envelope&gt;</camunda:inputParameter>
-        </camunda:inputOutput>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0kcsa2u</bpmn:incoming>
-      <bpmn:outgoing>Flow_0yukcau</bpmn:outgoing>
-    </bpmn:sendTask>
     <bpmn:receiveTask id="Activity_1l9hqwy" name="Receive Farm Site Inspection Verbal" messageRef="Message_3l2fah1">
       <bpmn:incoming>Flow_0yukcau</bpmn:incoming>
       <bpmn:outgoing>Flow_0vcmoos</bpmn:outgoing>
     </bpmn:receiveTask>
-    <bpmn:sendTask id="Activity_1e1xjp2" name="Farm Opening">
-      <bpmn:extensionElements>
-        <camunda:connector>
-          <camunda:connectorId>soap-http-connector</camunda:connectorId>
-        </camunda:connector>
-        <camunda:inputOutput>
-          <camunda:inputParameter name="headers">
-            <camunda:map>
-              <camunda:entry key="Content-Type">application/soap+xml;charset=UTF-8;action=""</camunda:entry>
-            </camunda:map>
-          </camunda:inputParameter>
-          <camunda:inputParameter name="url">http://localhost:8080/</camunda:inputParameter>
-          <camunda:inputParameter name="payload">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bpd="http://bpd.disim.univaq.it/"&gt;
- &lt;soapenv:Header/&gt;
-   &lt;soapenv:Body&gt;
-     &lt;bpd:op&gt;
-     &lt;/bpd:op&gt;
-   &lt;/soapenv:Body&gt;
-&lt;/soapenv:Envelope&gt;</camunda:inputParameter>
-        </camunda:inputOutput>
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0vcmoos</bpmn:incoming>
-      <bpmn:outgoing>Flow_18p8ga7</bpmn:outgoing>
-    </bpmn:sendTask>
     <bpmn:receiveTask id="Activity_0paq8k8" name="Receive Farm Business Startup Notification" messageRef="Message_29d76r9">
       <bpmn:incoming>Flow_18p8ga7</bpmn:incoming>
       <bpmn:outgoing>Flow_1gv08c3</bpmn:outgoing>
@@ -81,7 +30,7 @@
               <camunda:entry key="Content-Type">application/soap+xml;charset=UTF-8;action=""</camunda:entry>
             </camunda:map>
           </camunda:inputParameter>
-          <camunda:inputParameter name="url">http://localhost:8080/</camunda:inputParameter>
+          <camunda:inputParameter name="url">http://localhost:6060/</camunda:inputParameter>
           <camunda:inputParameter name="payload">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bpd="http://bpd.disim.univaq.it/"&gt;
  &lt;soapenv:Header/&gt;
    &lt;soapenv:Body&gt;
@@ -94,6 +43,77 @@
       <bpmn:incoming>Flow_1gv08c3</bpmn:incoming>
       <bpmn:outgoing>Flow_10g3zkl</bpmn:outgoing>
     </bpmn:sendTask>
+    <bpmn:sequenceFlow id="Flow_10g3zkl" sourceRef="Activity_1sidxdw" targetRef="Event_1l74sb2" />
+    <bpmn:sendTask id="Activity_1e1xjp2" name="Farm Opening">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:connectorId>soap-http-connector</camunda:connectorId>
+        </camunda:connector>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="headers">
+            <camunda:map>
+              <camunda:entry key="Content-Type">application/soap+xml;charset=UTF-8;action=""</camunda:entry>
+            </camunda:map>
+          </camunda:inputParameter>
+          <camunda:inputParameter name="url">http://localhost:6060/RegistryOffice/RegisitryOffice</camunda:inputParameter>
+          <camunda:inputParameter name="payload">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bpd="http://bpd.disim.univaq.it/"&gt;
+ &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+     &lt;bpd:op&gt;
+     &lt;/bpd:op&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</camunda:inputParameter>
+        </camunda:inputOutput>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0vcmoos</bpmn:incoming>
+      <bpmn:outgoing>Flow_18p8ga7</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:sequenceFlow id="Flow_18p8ga7" sourceRef="Activity_1e1xjp2" targetRef="Activity_0paq8k8" />
+    <bpmn:sendTask id="Activity_0b2gfkl" name="Request Farm Opening Site Inspection">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">http://localhost:6060/Veterinary/Veterinary</camunda:inputParameter>
+            <camunda:inputParameter name="payload">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vet="http://eu.chorevolution.farmbusinessstartup/veterinary"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;vet:farmSiteInspectionRequestElementRequest&gt;
+         &lt;choreographyId&gt;
+            &lt;choreographyId&gt;1&lt;/choreographyId&gt;
+         &lt;/choreographyId&gt;
+         &lt;senderParticipantName&gt;Gianluca&lt;/senderParticipantName&gt;
+         &lt;receiverParticipantName&gt;Michele&lt;/receiverParticipantName&gt;
+         &lt;choreographyTaskName&gt;farmbusinessstartup&lt;/choreographyTaskName&gt;
+         &lt;inputMessageName&gt;Prova&lt;/inputMessageName&gt;
+         &lt;inputMessageData&gt;
+            &lt;farmName&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.farmName}&lt;/farmName&gt;
+            &lt;companyName&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyName}&lt;/companyName&gt;
+            &lt;siteAddress&gt;
+               &lt;city&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyHeadquarter.city}&lt;/city&gt;
+               &lt;street&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyHeadquarter.street}&lt;/street&gt;
+               &lt;postcode&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyHeadquarter.postcode}&lt;/postcode&gt;
+            &lt;/siteAddress&gt;
+            &lt;farmSurface&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.farmSurface}&lt;/farmSurface&gt;
+            &lt;productionType&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.productionType}&lt;/productionType&gt;
+            &lt;breedingMethodologyType&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.breedingMethodologyType}&lt;/breedingMethodologyType&gt;
+            &lt;siteInspectionDeadline&gt;2022-07-15T15:00:00Z&lt;/siteInspectionDeadline&gt;
+         &lt;/inputMessageData&gt;
+      &lt;/vet:farmSiteInspectionRequestElementRequest&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Content-Type">application/soap+xml;charset=UTF-8;action=""</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>soap-http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0kcsa2u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0yukcau</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:sequenceFlow id="Flow_0yukcau" sourceRef="Activity_0b2gfkl" targetRef="Activity_1l9hqwy" />
   </bpmn:process>
   <bpmn:message id="Message_2v1lt56" name="farmBusinessStartupRequest" />
   <bpmn:message id="Message_3l2fah1" name="farmSiteInspectionResponse" />
