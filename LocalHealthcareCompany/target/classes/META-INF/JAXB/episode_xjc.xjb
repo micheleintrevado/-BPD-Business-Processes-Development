@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Questo file è stato generato dall'architettura JavaTM per XML Binding (JAXB) Reference Implementation, v2.3.0 
+Vedere <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Qualsiasi modifica a questo file andrà persa durante la ricompilazione dello schema di origine. 
+Generato il: 2022.07.16 alle 06:55:50 PM CEST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://eu.chorevolution.farmbusinessstartup/types">
+    <schemaBindings map="false">
+      <package name="it.univaq.disim.bpd.domain"/>
+    </schemaBindings>
+    <bindings scd="tns:farmBusinessStartupRequest">
+      <class ref="it.univaq.disim.bpd.domain.FarmBusinessStartupRequest"/>
+    </bindings>
+    <bindings scd="~tns:farmBusinessStartupRequestFormDetails">
+      <class ref="it.univaq.disim.bpd.domain.FarmBusinessStartupRequestFormDetails"/>
+    </bindings>
+    <bindings scd="tns:farmSiteInspectionRequest">
+      <class ref="it.univaq.disim.bpd.domain.FarmSiteInspectionRequest"/>
+    </bindings>
+    <bindings scd="~tns:veterinarySiteInspectionDetails">
+      <class ref="it.univaq.disim.bpd.domain.VeterinarySiteInspectionDetails"/>
+    </bindings>
+    <bindings scd="tns:farmRegistrationNotification">
+      <class ref="it.univaq.disim.bpd.domain.FarmRegistrationNotification"/>
+    </bindings>
+    <bindings scd="~tns:addressDetails">
+      <class ref="it.univaq.disim.bpd.domain.AddressDetails"/>
+    </bindings>
+    <bindings scd="~tns:personData">
+      <class ref="it.univaq.disim.bpd.domain.PersonData"/>
+    </bindings>
+    <bindings scd="~tns:farmDetails">
+      <class ref="it.univaq.disim.bpd.domain.FarmDetails"/>
+    </bindings>
+    <bindings scd="~tns:productionTypology">
+      <typesafeEnumClass ref="it.univaq.disim.bpd.domain.ProductionTypology"/>
+    </bindings>
+    <bindings scd="~tns:breedingMethodTypology">
+      <typesafeEnumClass ref="it.univaq.disim.bpd.domain.BreedingMethodTypology"/>
+    </bindings>
+    <bindings scd="~tns:companyTypology">
+      <typesafeEnumClass ref="it.univaq.disim.bpd.domain.CompanyTypology"/>
+    </bindings>
+  </bindings>
+</bindings>
+
