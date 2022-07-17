@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<servicething:ServiceThingModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:servicething="http://eu.chorevolution/modelingnotations/servicething" name="VeterinaryRegionalRegister-service">
-  <interfaceDescription xsi:type="servicething:WSDLModel"/>
-</servicething:ServiceThingModel>
