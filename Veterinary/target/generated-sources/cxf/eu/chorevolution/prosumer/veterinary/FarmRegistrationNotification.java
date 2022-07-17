@@ -9,26 +9,26 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmRegistrationNotification complex type.
+ * &lt;p&gt;Classe Java per farmRegistrationNotification complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
- * <pre>
- * &lt;complexType name="farmRegistrationNotification"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="farmCode" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="farmName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="siteAddress" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}addressDetails"/&gt;
- *         &lt;element name="farmSurface" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="productionType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}productionTypology"/&gt;
- *         &lt;element name="breedingMethodologyType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}breedingMethodTypology"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * &lt;pre&gt;
+ * &amp;lt;complexType name="farmRegistrationNotification"&amp;gt;
+ *   &amp;lt;complexContent&amp;gt;
+ *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
+ *       &amp;lt;sequence&amp;gt;
+ *         &amp;lt;element name="farmCode" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
+ *         &amp;lt;element name="farmName" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
+ *         &amp;lt;element name="siteAddress" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}addressDetails"/&amp;gt;
+ *         &amp;lt;element name="farmSurface" type="{http://www.w3.org/2001/XMLSchema}int"/&amp;gt;
+ *         &amp;lt;element name="productionType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}productionTypology"/&amp;gt;
+ *         &amp;lt;element name="breedingMethodologyType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}breedingMethodTypology"/&amp;gt;
+ *       &amp;lt;/sequence&amp;gt;
+ *     &amp;lt;/restriction&amp;gt;
+ *   &amp;lt;/complexContent&amp;gt;
+ * &amp;lt;/complexType&amp;gt;
+ * &lt;/pre&gt;
  * 
  * 
  */
@@ -58,7 +58,7 @@ public class FarmRegistrationNotification {
     protected BreedingMethodTypology breedingMethodologyType;
 
     /**
-     * Gets the value of the farmCode property.
+     * Recupera il valore della proprietà farmCode.
      * 
      * @return
      *     possible object is
@@ -70,7 +70,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Sets the value of the farmCode property.
+     * Imposta il valore della proprietà farmCode.
      * 
      * @param value
      *     allowed object is
@@ -82,7 +82,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Gets the value of the farmName property.
+     * Recupera il valore della proprietà farmName.
      * 
      * @return
      *     possible object is
@@ -94,7 +94,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Sets the value of the farmName property.
+     * Imposta il valore della proprietà farmName.
      * 
      * @param value
      *     allowed object is
@@ -106,7 +106,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Gets the value of the siteAddress property.
+     * Recupera il valore della proprietà siteAddress.
      * 
      * @return
      *     possible object is
@@ -118,7 +118,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Sets the value of the siteAddress property.
+     * Imposta il valore della proprietà siteAddress.
      * 
      * @param value
      *     allowed object is
@@ -130,7 +130,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Gets the value of the farmSurface property.
+     * Recupera il valore della proprietà farmSurface.
      * 
      */
     public int getFarmSurface() {
@@ -138,7 +138,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Sets the value of the farmSurface property.
+     * Imposta il valore della proprietà farmSurface.
      * 
      */
     public void setFarmSurface(int value) {
@@ -146,7 +146,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Gets the value of the productionType property.
+     * Recupera il valore della proprietà productionType.
      * 
      * @return
      *     possible object is
@@ -158,7 +158,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Sets the value of the productionType property.
+     * Imposta il valore della proprietà productionType.
      * 
      * @param value
      *     allowed object is
@@ -170,7 +170,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Gets the value of the breedingMethodologyType property.
+     * Recupera il valore della proprietà breedingMethodologyType.
      * 
      * @return
      *     possible object is
@@ -182,7 +182,7 @@ public class FarmRegistrationNotification {
     }
 
     /**
-     * Sets the value of the breedingMethodologyType property.
+     * Imposta il valore della proprietà breedingMethodologyType.
      * 
      * @param value
      *     allowed object is

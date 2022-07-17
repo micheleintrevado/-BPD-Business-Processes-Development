@@ -8,22 +8,22 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmOpeningNotification complex type.
+ * &lt;p&gt;Classe Java per farmOpeningNotification complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
- * <pre>
- * &lt;complexType name="farmOpeningNotification"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="farmOpeningRequestForm" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmBusinessStartupRequestFormDetails"/&gt;
- *         &lt;element name="siteInspectionDetails" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}veterinarySiteInspectionDetails"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * &lt;pre&gt;
+ * &amp;lt;complexType name="farmOpeningNotification"&amp;gt;
+ *   &amp;lt;complexContent&amp;gt;
+ *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
+ *       &amp;lt;sequence&amp;gt;
+ *         &amp;lt;element name="farmOpeningRequestForm" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmBusinessStartupRequestFormDetails"/&amp;gt;
+ *         &amp;lt;element name="siteInspectionDetails" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}veterinarySiteInspectionDetails"/&amp;gt;
+ *       &amp;lt;/sequence&amp;gt;
+ *     &amp;lt;/restriction&amp;gt;
+ *   &amp;lt;/complexContent&amp;gt;
+ * &amp;lt;/complexType&amp;gt;
+ * &lt;/pre&gt;
  * 
  * 
  */
@@ -40,7 +40,7 @@ public class FarmOpeningNotification {
     protected VeterinarySiteInspectionDetails siteInspectionDetails;
 
     /**
-     * Gets the value of the farmOpeningRequestForm property.
+     * Recupera il valore della proprietà farmOpeningRequestForm.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class FarmOpeningNotification {
     }
 
     /**
-     * Sets the value of the farmOpeningRequestForm property.
+     * Imposta il valore della proprietà farmOpeningRequestForm.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class FarmOpeningNotification {
     }
 
     /**
-     * Gets the value of the siteInspectionDetails property.
+     * Recupera il valore della proprietà siteInspectionDetails.
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class FarmOpeningNotification {
     }
 
     /**
-     * Sets the value of the siteInspectionDetails property.
+     * Imposta il valore della proprietà siteInspectionDetails.
      * 
      * @param value
      *     allowed object is

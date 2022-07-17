@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns="http://eu.chorevolution.farmbusinessstartup" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ext="http://org.eclipse.bpmn2/ext" xmlns:types="http://eu.chorevolution.farmbusinessstartup/types" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.3.2.Final-v20161020-1541-B59" targetNamespace="http://eu.chorevolution.farmbusinessstartup">
+  <bpmn2:import importType="http://www.w3.org/2001/XMLSchema" location="types.xsd" namespace="http://eu.chorevolution.farmbusinessstartup/types"/>
+  <bpmn2:itemDefinition id="ItemDefinition_1" structureRef="types:farmBusinessStartupRequest"/>
+  <bpmn2:itemDefinition id="ItemDefinition_2" structureRef="types:farmSiteInspectionRequest"/>
+  <bpmn2:itemDefinition id="ItemDefinition_3" structureRef="types:farmSiteInspectionResponse"/>
+  <bpmn2:itemDefinition id="ItemDefinition_4" structureRef="types:farmOpeningNotification"/>
+  <bpmn2:itemDefinition id="ItemDefinition_5" structureRef="types:farmRegistrationRequest"/>
+  <bpmn2:itemDefinition id="ItemDefinition_6" structureRef="types:farmRegistrationResponse"/>
+  <bpmn2:itemDefinition id="ItemDefinition_7" structureRef="types:farmBusinessStartupResponse"/>
+  <bpmn2:itemDefinition id="ItemDefinition_8" structureRef="types:farmRegistrationNotification"/>
+  <bpmn2:itemDefinition id="ItemDefinition_9" structureRef="types:farmBusinessCodeStartupNotification"/>
+  <bpmn2:message id="Message_2" itemRef="#ItemDefinition_1" name="farmBusinessStartupRequest">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_4" itemRef="#ItemDefinition_2" name="farmSiteInspectionRequest">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_6" itemRef="#ItemDefinition_3" name="farmSiteInspectionResponse">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_8" itemRef="#ItemDefinition_4" name="farmOpeningNotification">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_10" itemRef="#ItemDefinition_5" name="farmRegistrationRequest">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_3" itemRef="#ItemDefinition_6" name="farmRegistrationResponse">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_7" itemRef="#ItemDefinition_7" name="farmBusinessStartupResponse">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_11" itemRef="#ItemDefinition_8" name="farmRegistrationNotification">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_13" itemRef="#ItemDefinition_8" name="farmRegistrationNotification">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_15" itemRef="#ItemDefinition_9" name="farmBusinessCodeStartupNotification">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_5" itemRef="#ItemDefinition_6" name="farmRegistrationResponse">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:message id="Message_9" itemRef="#ItemDefinition_7" name="farmBusinessStartupResponse">
+    <bpmn2:extensionElements>
+      <ext:style/>
+    </bpmn2:extensionElements>
+  </bpmn2:message>
+  <bpmn2:choreography id="Choreography_1" name="Default Choreography">
+    <bpmn2:participant id="Participant_1" name="User">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#546778" ext:shapeBackground="#d4e7f8" ext:labelForeground="#546778" ext:labelFont="arial,13.0,-,B" ext:routingStyle="Manhattan"/>
+      </bpmn2:extensionElements>
+    </bpmn2:participant>
+    <bpmn2:participant id="Participant_2" name="Local Healthcare Company">
+      <bpmn2:extensionElements>
+        <ext:style ext:shapeForeground="#546778" ext:shapeBackground="#d4e7f8" ext:labelForeground="#546778" ext:labelFont="arial,13.0,-,B" ext:routingStyle="Manhattan"/>
+      </bpmn2:extensionElements>
+    </bpmn2:participant>
+    <bpmn2:messageFlow id="MessageFlow_1" messageRef="#Message_2" name="Message Flow 1" sourceRef="#Participant_1" targetRef="#Participant_2"/>
+    <bpmn2:messageFlow id="MessageFlow_7" messageRef="#Message_7" name="Message Flow 7" targetRef="#Participant_1"/>
+    <bpmn2:messageFlow id="MessageFlow_11" messageRef="#Message_5" name="Message Flow 11" sourceRef="#Participant_2" targetRef="#Participant_1"/>
+    <bpmn2:messageFlow id="MessageFlow_12" messageRef="#Message_9" name="Message Flow 12" sourceRef="#Participant_2" targetRef="#Participant_1"/>
+    <bpmn2:choreographyTask id="ChoreographyTask_1" name="Farm Business Code Request" initiatingParticipantRef="#Participant_1">
+      <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
+      <bpmn2:participantRef>#Participant_1</bpmn2:participantRef>
+      <bpmn2:participantRef>#Participant_2</bpmn2:participantRef>
+      <bpmn2:messageFlowRef>#MessageFlow_1</bpmn2:messageFlowRef>
+    </bpmn2:choreographyTask>
+    <bpmn2:endEvent id="EndEvent_1">
+      <bpmn2:incoming>SequenceFlow_18</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="StartEvent_1" name="Triggered By User">
+      <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_1" sourceRef="StartEvent_1" targetRef="ChoreographyTask_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="ChoreographyTask_1" targetRef="ChoreographyTask_6"/>
+    <bpmn2:choreographyTask id="ChoreographyTask_6" name="Farm Business Code Assignment" initiatingParticipantRef="#Participant_2">
+      <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_18</bpmn2:outgoing>
+      <bpmn2:participantRef>#Participant_2</bpmn2:participantRef>
+      <bpmn2:participantRef>#Participant_1</bpmn2:participantRef>
+      <bpmn2:messageFlowRef>#MessageFlow_12</bpmn2:messageFlowRef>
+    </bpmn2:choreographyTask>
+    <bpmn2:sequenceFlow id="SequenceFlow_18" sourceRef="ChoreographyTask_6" targetRef="EndEvent_1"/>
+  </bpmn2:choreography>
+</bpmn2:definitions>

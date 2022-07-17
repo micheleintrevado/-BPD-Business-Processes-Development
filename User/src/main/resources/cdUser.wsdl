@@ -209,7 +209,7 @@
   </wsdl:binding>
   <wsdl:service name="LocalHealthcareCompanyUserService">
     <wsdl:port binding="tns:LocalHealthcareCompanyUserBinding" name="LocalHealthcareCompanyUserPort">
-      <soap:address location="http://localhost:8080/ode/processes/LocalHealthcareCompanyUser"/>
+      <soap:address location="http://localhost:7070/LocalHealthcareCompany/localhealthcarecompany"/>
     </wsdl:port>
   </wsdl:service>
   <wsdl:service name="UserService">

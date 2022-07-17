@@ -8,26 +8,26 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmRegistrationNotificationType complex type.
+ * &lt;p&gt;Classe Java per farmRegistrationNotificationType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
- * <pre>
- * &lt;complexType name="farmRegistrationNotificationType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="choreographyId" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}choreographyInstanceRequest"/&gt;
- *         &lt;element name="senderParticipantName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="receiverParticipantName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="choreographyTaskName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="inputMessageName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="inputMessageData" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmRegistrationNotification"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * &lt;pre&gt;
+ * &amp;lt;complexType name="farmRegistrationNotificationType"&amp;gt;
+ *   &amp;lt;complexContent&amp;gt;
+ *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
+ *       &amp;lt;sequence&amp;gt;
+ *         &amp;lt;element name="choreographyId" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}choreographyInstanceRequest"/&amp;gt;
+ *         &amp;lt;element name="senderParticipantName" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
+ *         &amp;lt;element name="receiverParticipantName" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
+ *         &amp;lt;element name="choreographyTaskName" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
+ *         &amp;lt;element name="inputMessageName" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
+ *         &amp;lt;element name="inputMessageData" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmRegistrationNotification"/&amp;gt;
+ *       &amp;lt;/sequence&amp;gt;
+ *     &amp;lt;/restriction&amp;gt;
+ *   &amp;lt;/complexContent&amp;gt;
+ * &amp;lt;/complexType&amp;gt;
+ * &lt;/pre&gt;
  * 
  * 
  */
@@ -56,7 +56,7 @@ public class FarmRegistrationNotificationType {
     protected FarmRegistrationNotification inputMessageData;
 
     /**
-     * Gets the value of the choreographyId property.
+     * Recupera il valore della proprietà choreographyId.
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Sets the value of the choreographyId property.
+     * Imposta il valore della proprietà choreographyId.
      * 
      * @param value
      *     allowed object is
@@ -80,7 +80,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Gets the value of the senderParticipantName property.
+     * Recupera il valore della proprietà senderParticipantName.
      * 
      * @return
      *     possible object is
@@ -92,7 +92,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Sets the value of the senderParticipantName property.
+     * Imposta il valore della proprietà senderParticipantName.
      * 
      * @param value
      *     allowed object is
@@ -104,7 +104,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Gets the value of the receiverParticipantName property.
+     * Recupera il valore della proprietà receiverParticipantName.
      * 
      * @return
      *     possible object is
@@ -116,7 +116,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Sets the value of the receiverParticipantName property.
+     * Imposta il valore della proprietà receiverParticipantName.
      * 
      * @param value
      *     allowed object is
@@ -128,7 +128,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Gets the value of the choreographyTaskName property.
+     * Recupera il valore della proprietà choreographyTaskName.
      * 
      * @return
      *     possible object is
@@ -140,7 +140,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Sets the value of the choreographyTaskName property.
+     * Imposta il valore della proprietà choreographyTaskName.
      * 
      * @param value
      *     allowed object is
@@ -152,7 +152,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Gets the value of the inputMessageName property.
+     * Recupera il valore della proprietà inputMessageName.
      * 
      * @return
      *     possible object is
@@ -164,7 +164,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Sets the value of the inputMessageName property.
+     * Imposta il valore della proprietà inputMessageName.
      * 
      * @param value
      *     allowed object is
@@ -176,7 +176,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Gets the value of the inputMessageData property.
+     * Recupera il valore della proprietà inputMessageData.
      * 
      * @return
      *     possible object is
@@ -188,7 +188,7 @@ public class FarmRegistrationNotificationType {
     }
 
     /**
-     * Sets the value of the inputMessageData property.
+     * Imposta il valore della proprietà inputMessageData.
      * 
      * @param value
      *     allowed object is

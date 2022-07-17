@@ -53,13 +53,67 @@
                 <camunda:entry key="Content-Type">application/soap+xml;charset=UTF-8;action=""</camunda:entry>
               </camunda:map>
             </camunda:inputParameter>
-            <camunda:inputParameter name="payload">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bpd="http://bpd.disim.univaq.it/"&gt;
- &lt;soapenv:Header/&gt;
+            <camunda:inputParameter name="payload">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:reg="http://eu.chorevolution.farmbusinessstartup/registryoffice"&gt;
+   &lt;soapenv:Header/&gt;
    &lt;soapenv:Body&gt;
-     &lt;bpd:op&gt;
-     &lt;/bpd:op&gt;
+      &lt;reg:farmOpeningNotificationElementRequest&gt;
+         &lt;choreographyId&gt;
+            &lt;choreographyId&gt;1&lt;/choreographyId&gt;
+         &lt;/choreographyId&gt;
+         &lt;senderParticipantName&gt;Local Healthcare Company&lt;/senderParticipantName&gt;
+         &lt;receiverParticipantName&gt;Registry Office&lt;/receiverParticipantName&gt;
+         &lt;choreographyTaskName&gt;Farm Opening&lt;/choreographyTaskName&gt;
+         &lt;inputMessageName&gt;farmOpeningNotification&lt;/inputMessageName&gt;
+         &lt;inputMessageData&gt;
+            &lt;farmOpeningRequestForm&gt;
+               &lt;owner&gt;
+                  &lt;name&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.owner.name}&lt;/name&gt;
+                  &lt;surname&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.owner.surname}&lt;/surname&gt;
+                  &lt;address&gt;
+                     &lt;city&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.owner.address.city}&lt;/city&gt;
+                     &lt;street&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.owner.address.street}&lt;/street&gt;
+                     &lt;postcode&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.owner.address.postcode}&lt;/postcode&gt;
+                  &lt;/address&gt;
+                  &lt;phoneNumber&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.owner.phoneNumber}&lt;/phoneNumber&gt;
+                  &lt;email&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.owner.email}&lt;/email&gt;
+                  &lt;fiscalCode&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.owner.fiscalCode}&lt;/fiscalCode&gt;
+               &lt;/owner&gt;
+               &lt;farm&gt;
+                  &lt;farmName&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.farmName}&lt;/farmName&gt;
+                  &lt;companyName&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyName}&lt;/companyName&gt;
+                  &lt;companyType&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyType}&lt;/companyType&gt;
+                  &lt;companyHeadquarter&gt;
+                     &lt;city&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyHeadquarter.city}&lt;/city&gt;
+                     &lt;street&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyHeadquarter.street}&lt;/street&gt;
+                     &lt;postcode&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyHeadquarter.postcode}&lt;/postcode&gt;
+                  &lt;/companyHeadquarter&gt;
+                  &lt;farmSurface&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.farmSurface}&lt;/farmSurface&gt;
+                  &lt;phoneNumber&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.productionType}&lt;/phoneNumber&gt;
+                  &lt;email&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.email}&lt;/email&gt;
+                  &lt;vatNumber&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.vatNumber}&lt;/vatNumber&gt;
+                  &lt;productionType&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.productionType}&lt;/productionType&gt;
+                  &lt;breedingMethodologyType&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.breedingMethodologyType}&lt;/breedingMethodologyType&gt;
+               &lt;/farm&gt;
+            &lt;/farmOpeningRequestForm&gt;
+            &lt;siteInspectionDetails&gt;
+               &lt;veterinaryName&gt;${farmSiteInspectionResponse.siteInspectionVerbal.veterinaryName}&lt;/veterinaryName&gt;
+               &lt;veterinarySurname&gt;${farmSiteInspectionResponse.siteInspectionVerbal.veterinarySurname}&lt;/veterinarySurname&gt;
+               &lt;siteAddress&gt;
+                  &lt;city&gt;${farmSiteInspectionResponse.siteInspectionVerbal.siteAddress.city}&lt;/city&gt;
+                  &lt;street&gt;${farmSiteInspectionResponse.siteInspectionVerbal.siteAddress.street}&lt;/street&gt;
+                  &lt;postcode&gt;${farmSiteInspectionResponse.siteInspectionVerbal.siteAddress.postcode}&lt;/postcode&gt;
+               &lt;/siteAddress&gt;
+               &lt;farmSurface&gt;${farmSiteInspectionResponse.siteInspectionVerbal.farmSurface}&lt;/farmSurface&gt;
+               &lt;productionType&gt;${farmSiteInspectionResponse.siteInspectionVerbal.productionType}&lt;/productionType&gt;
+               &lt;breedingMethodologyType&gt;${farmSiteInspectionResponse.siteInspectionVerbal.breedingMethodologyType}&lt;/breedingMethodologyType&gt;
+               &lt;siteInspectionDate&gt;${farmSiteInspectionResponse.siteInspectionVerbal.siteInspectionDate}&lt;/siteInspectionDate&gt;
+               &lt;referenceLegislation&gt;${farmSiteInspectionResponse.siteInspectionVerbal.referenceLegislation}&lt;/referenceLegislation&gt;
+            &lt;/siteInspectionDetails&gt;
+         &lt;/inputMessageData&gt;
+      &lt;/reg:farmOpeningNotificationElementRequest&gt;
    &lt;/soapenv:Body&gt;
 &lt;/soapenv:Envelope&gt;</camunda:inputParameter>
+            <camunda:inputParameter name="url">http://localhost:9090/RegistryOffice/RegistryOffice</camunda:inputParameter>
           </camunda:inputOutput>
           <camunda:connectorId>soap-http-connector</camunda:connectorId>
         </camunda:connector>
@@ -72,7 +126,7 @@
       <bpmn:extensionElements>
         <camunda:connector>
           <camunda:inputOutput>
-            <camunda:inputParameter name="url">http://localhost:6060/Veterinary/Veterinary</camunda:inputParameter>
+            <camunda:inputParameter name="url">http://localhost:9090/Veterinary/Veterinary</camunda:inputParameter>
             <camunda:inputParameter name="payload">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vet="http://eu.chorevolution.farmbusinessstartup/veterinary"&gt;
    &lt;soapenv:Header/&gt;
    &lt;soapenv:Body&gt;
@@ -80,10 +134,10 @@
          &lt;choreographyId&gt;
             &lt;choreographyId&gt;1&lt;/choreographyId&gt;
          &lt;/choreographyId&gt;
-         &lt;senderParticipantName&gt;Gianluca&lt;/senderParticipantName&gt;
-         &lt;receiverParticipantName&gt;Michele&lt;/receiverParticipantName&gt;
-         &lt;choreographyTaskName&gt;farmbusinessstartup&lt;/choreographyTaskName&gt;
-         &lt;inputMessageName&gt;Prova&lt;/inputMessageName&gt;
+         &lt;senderParticipantName&gt;Local Healthcare Company&lt;/senderParticipantName&gt;
+         &lt;receiverParticipantName&gt;Veterinary&lt;/receiverParticipantName&gt;
+         &lt;choreographyTaskName&gt;Farm Opening Site Inspection Request&lt;/choreographyTaskName&gt;
+         &lt;inputMessageName&gt;farmSiteInspectionRequest&lt;/inputMessageName&gt;
          &lt;inputMessageData&gt;
             &lt;farmName&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.farmName}&lt;/farmName&gt;
             &lt;companyName&gt;${farmBusinessStartupRequest.farmBusinessStartupRequestForm.farm.companyName}&lt;/companyName&gt;

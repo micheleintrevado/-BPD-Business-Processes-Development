@@ -44,7 +44,7 @@ public class RegistryOfficePTImpl implements RegistryOfficePT {
     	ChoreographyInstanceMessagesStore store = choreographyDataService.getChoreographyInstanceMessages(parameters.getChoreographyId().getChoreographyId());
 		store.storeMessage(parameters.getSenderParticipantName(), parameters.getReceiverParticipantName(), parameters.getInputMessageName(), parameters.getChoreographyTaskName(), parameters.getInputMessageData());
   		service.farmOpening(parameters.getInputMessageData(), parameters.getChoreographyTaskName(), parameters.getSenderParticipantName());
-		
+		System.out.println("Register riceve messaggio f");
 		return result;
     }
      

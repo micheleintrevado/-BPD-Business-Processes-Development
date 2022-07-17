@@ -7,21 +7,20 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for productionTypology.
+ * &lt;p&gt;Classe Java per productionTypology.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="productionTypology"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="weaning center"/&gt;
- *     &lt;enumeration value="fattening for self-consumption"/&gt;
- *     &lt;enumeration value="fattening cattle adults"/&gt;
- *     &lt;enumeration value="fattening calf white meat"/&gt;
- *     &lt;enumeration value="milk production"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
- * </pre>
+ * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * &lt;pre&gt;
+ * &amp;lt;simpleType name="productionTypology"&amp;gt;
+ *   &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&amp;gt;
+ *     &amp;lt;enumeration value="weaning center"/&amp;gt;
+ *     &amp;lt;enumeration value="fattening for self-consumption"/&amp;gt;
+ *     &amp;lt;enumeration value="fattening cattle adults"/&amp;gt;
+ *     &amp;lt;enumeration value="fattening calf white meat"/&amp;gt;
+ *     &amp;lt;enumeration value="milk production"/&amp;gt;
+ *   &amp;lt;/restriction&amp;gt;
+ * &amp;lt;/simpleType&amp;gt;
+ * &lt;/pre&gt;
  * 
  */
 @XmlType(name = "productionTypology")

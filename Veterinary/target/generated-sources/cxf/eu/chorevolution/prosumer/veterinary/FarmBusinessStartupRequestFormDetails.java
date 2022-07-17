@@ -8,22 +8,22 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmBusinessStartupRequestFormDetails complex type.
+ * &lt;p&gt;Classe Java per farmBusinessStartupRequestFormDetails complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
- * <pre>
- * &lt;complexType name="farmBusinessStartupRequestFormDetails"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="owner" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}personData"/&gt;
- *         &lt;element name="farm" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmDetails"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * &lt;pre&gt;
+ * &amp;lt;complexType name="farmBusinessStartupRequestFormDetails"&amp;gt;
+ *   &amp;lt;complexContent&amp;gt;
+ *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
+ *       &amp;lt;sequence&amp;gt;
+ *         &amp;lt;element name="owner" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}personData"/&amp;gt;
+ *         &amp;lt;element name="farm" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmDetails"/&amp;gt;
+ *       &amp;lt;/sequence&amp;gt;
+ *     &amp;lt;/restriction&amp;gt;
+ *   &amp;lt;/complexContent&amp;gt;
+ * &amp;lt;/complexType&amp;gt;
+ * &lt;/pre&gt;
  * 
  * 
  */
@@ -40,7 +40,7 @@ public class FarmBusinessStartupRequestFormDetails {
     protected FarmDetails farm;
 
     /**
-     * Gets the value of the owner property.
+     * Recupera il valore della proprietà owner.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class FarmBusinessStartupRequestFormDetails {
     }
 
     /**
-     * Sets the value of the owner property.
+     * Imposta il valore della proprietà owner.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class FarmBusinessStartupRequestFormDetails {
     }
 
     /**
-     * Gets the value of the farm property.
+     * Recupera il valore della proprietà farm.
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class FarmBusinessStartupRequestFormDetails {
     }
 
     /**
-     * Sets the value of the farm property.
+     * Imposta il valore della proprietà farm.
      * 
      * @param value
      *     allowed object is

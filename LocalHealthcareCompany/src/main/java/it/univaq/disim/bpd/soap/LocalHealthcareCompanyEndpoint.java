@@ -36,7 +36,6 @@ public class LocalHealthcareCompanyEndpoint {
 	public void receiveFarmSiteInspectionVerbal(@RequestPayload FarmSiteInspectionRequest request) {
 		
 		System.out.println("Received SOAP message farmSiteInspectionResponse");
-		
 		runtimeService.createMessageCorrelation("farmSiteInspectionResponse")
 				.processInstanceBusinessKey(request.getRequestId())
 				.setVariable("farmSiteInspectionResponse", request)

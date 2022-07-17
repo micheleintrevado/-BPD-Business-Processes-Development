@@ -11,7 +11,7 @@ import javax.xml.namespace.QName;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the eu.chorevolution.prosumer.veterinary package. 
- * <p>An ObjectFactory allows you to programatically 
+ * &lt;p&gt;An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -207,8 +207,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FarmSiteInspectionRequestType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FarmSiteInspectionRequestType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link FarmSiteInspectionRequestType }{@code >}
      */
     @XmlElementDecl(namespace = "http://eu.chorevolution.farmbusinessstartup/veterinary", name = "farmSiteInspectionRequestElementRequest")
     public JAXBElement<FarmSiteInspectionRequestType> createFarmSiteInspectionRequestElementRequest(FarmSiteInspectionRequestType value) {
@@ -216,8 +220,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FarmSiteInspectionRequestReturnType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FarmSiteInspectionRequestReturnType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link FarmSiteInspectionRequestReturnType }{@code >}
      */
     @XmlElementDecl(namespace = "http://eu.chorevolution.farmbusinessstartup/veterinary", name = "farmSiteInspectionRequestElementResponse")
     public JAXBElement<FarmSiteInspectionRequestReturnType> createFarmSiteInspectionRequestElementResponse(FarmSiteInspectionRequestReturnType value) {
@@ -225,8 +233,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SendRequestType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SendRequestType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link SendRequestType }{@code >}
      */
     @XmlElementDecl(namespace = "http://eu.chorevolution.farmbusinessstartup/veterinary", name = "sendFarmSiteInspectionResponseElementRequest")
     public JAXBElement<SendRequestType> createSendFarmSiteInspectionResponseElementRequest(SendRequestType value) {
@@ -234,8 +246,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FarmSiteInspectionResponseReturnType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FarmSiteInspectionResponseReturnType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link FarmSiteInspectionResponseReturnType }{@code >}
      */
     @XmlElementDecl(namespace = "http://eu.chorevolution.farmbusinessstartup/veterinary", name = "sendFarmSiteInspectionResponseElementResponse")
     public JAXBElement<FarmSiteInspectionResponseReturnType> createSendFarmSiteInspectionResponseElementResponse(FarmSiteInspectionResponseReturnType value) {
@@ -243,8 +259,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FarmRegistrationNotificationType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FarmRegistrationNotificationType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link FarmRegistrationNotificationType }{@code >}
      */
     @XmlElementDecl(namespace = "http://eu.chorevolution.farmbusinessstartup/veterinary", name = "farmRegistrationNotificationElementRequest")
     public JAXBElement<FarmRegistrationNotificationType> createFarmRegistrationNotificationElementRequest(FarmRegistrationNotificationType value) {
@@ -252,8 +272,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FarmRegistrationNotificationReturnType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FarmRegistrationNotificationReturnType }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link FarmRegistrationNotificationReturnType }{@code >}
      */
     @XmlElementDecl(namespace = "http://eu.chorevolution.farmbusinessstartup/veterinary", name = "farmRegistrationNotificationElementResponse")
     public JAXBElement<FarmRegistrationNotificationReturnType> createFarmRegistrationNotificationElementResponse(FarmRegistrationNotificationReturnType value) {

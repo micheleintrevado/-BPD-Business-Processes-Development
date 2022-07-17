@@ -8,21 +8,21 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmBusinessStartupRequest complex type.
+ * &lt;p&gt;Classe Java per farmBusinessStartupRequest complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
- * <pre>
- * &lt;complexType name="farmBusinessStartupRequest"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="farmBusinessStartupRequestForm" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmBusinessStartupRequestFormDetails"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
- * </pre>
+ * &lt;pre&gt;
+ * &amp;lt;complexType name="farmBusinessStartupRequest"&amp;gt;
+ *   &amp;lt;complexContent&amp;gt;
+ *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
+ *       &amp;lt;sequence&amp;gt;
+ *         &amp;lt;element name="farmBusinessStartupRequestForm" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmBusinessStartupRequestFormDetails"/&amp;gt;
+ *       &amp;lt;/sequence&amp;gt;
+ *     &amp;lt;/restriction&amp;gt;
+ *   &amp;lt;/complexContent&amp;gt;
+ * &amp;lt;/complexType&amp;gt;
+ * &lt;/pre&gt;
  * 
  * 
  */
@@ -36,7 +36,7 @@ public class FarmBusinessStartupRequest {
     protected FarmBusinessStartupRequestFormDetails farmBusinessStartupRequestForm;
 
     /**
-     * Gets the value of the farmBusinessStartupRequestForm property.
+     * Recupera il valore della proprietà farmBusinessStartupRequestForm.
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class FarmBusinessStartupRequest {
     }
 
     /**
-     * Sets the value of the farmBusinessStartupRequestForm property.
+     * Imposta il valore della proprietà farmBusinessStartupRequestForm.
      * 
      * @param value
      *     allowed object is
