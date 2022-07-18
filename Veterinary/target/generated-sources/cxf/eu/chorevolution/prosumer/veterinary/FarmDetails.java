@@ -9,30 +9,30 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Classe Java per farmDetails complex type.
+ * <p>Classe Java per farmDetails complex type.
  * 
- * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="farmDetails"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="farmName" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
- *         &amp;lt;element name="companyName" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
- *         &amp;lt;element name="companyType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}companyTypology"/&amp;gt;
- *         &amp;lt;element name="companyHeadquarter" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}addressDetails"/&amp;gt;
- *         &amp;lt;element name="farmSurface" type="{http://www.w3.org/2001/XMLSchema}int"/&amp;gt;
- *         &amp;lt;element name="phoneNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
- *         &amp;lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
- *         &amp;lt;element name="vatNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&amp;gt;
- *         &amp;lt;element name="productionType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}productionTypology"/&amp;gt;
- *         &amp;lt;element name="breedingMethodologyType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}breedingMethodTypology"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="farmDetails"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="farmName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="companyName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="companyType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}companyTypology"/&gt;
+ *         &lt;element name="companyHeadquarter" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}addressDetails"/&gt;
+ *         &lt;element name="farmSurface" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="phoneNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="vatNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="productionType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}productionTypology"/&gt;
+ *         &lt;element name="breedingMethodologyType" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}breedingMethodTypology"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

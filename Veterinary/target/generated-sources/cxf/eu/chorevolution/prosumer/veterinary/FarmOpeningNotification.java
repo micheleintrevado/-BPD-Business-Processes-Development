@@ -8,22 +8,22 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Classe Java per farmOpeningNotification complex type.
+ * <p>Classe Java per farmOpeningNotification complex type.
  * 
- * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
- * &lt;pre&gt;
- * &amp;lt;complexType name="farmOpeningNotification"&amp;gt;
- *   &amp;lt;complexContent&amp;gt;
- *     &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&amp;gt;
- *       &amp;lt;sequence&amp;gt;
- *         &amp;lt;element name="farmOpeningRequestForm" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmBusinessStartupRequestFormDetails"/&amp;gt;
- *         &amp;lt;element name="siteInspectionDetails" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}veterinarySiteInspectionDetails"/&amp;gt;
- *       &amp;lt;/sequence&amp;gt;
- *     &amp;lt;/restriction&amp;gt;
- *   &amp;lt;/complexContent&amp;gt;
- * &amp;lt;/complexType&amp;gt;
- * &lt;/pre&gt;
+ * <pre>
+ * &lt;complexType name="farmOpeningNotification"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="farmOpeningRequestForm" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}farmBusinessStartupRequestFormDetails"/&gt;
+ *         &lt;element name="siteInspectionDetails" type="{http://eu.chorevolution.farmbusinessstartup/veterinary}veterinarySiteInspectionDetails"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
  * 
  * 
  */

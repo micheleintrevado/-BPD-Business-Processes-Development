@@ -7,18 +7,19 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Classe Java per breedingMethodTypology.
+ * <p>Classe Java per breedingMethodTypology.
  * 
- * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * &lt;pre&gt;
- * &amp;lt;simpleType name="breedingMethodTypology"&amp;gt;
- *   &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&amp;gt;
- *     &amp;lt;enumeration value="intensive"/&amp;gt;
- *     &amp;lt;enumeration value="free-range intensive"/&amp;gt;
- *     &amp;lt;enumeration value="transhumant"/&amp;gt;
- *   &amp;lt;/restriction&amp;gt;
- * &amp;lt;/simpleType&amp;gt;
- * &lt;/pre&gt;
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * <pre>
+ * &lt;simpleType name="breedingMethodTypology"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="intensive"/&gt;
+ *     &lt;enumeration value="free-range intensive"/&gt;
+ *     &lt;enumeration value="transhumant"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * </pre>
  * 
  */
 @XmlType(name = "breedingMethodTypology")

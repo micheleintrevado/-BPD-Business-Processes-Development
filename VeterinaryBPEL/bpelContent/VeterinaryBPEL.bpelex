@@ -6,7 +6,7 @@
   </extensions>
   <extensions>
     <extendedObject href="VeterinaryBPEL.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1657821141559"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1658096033108"/>
   </extensions>
   <extensions>
     <extendedObject href="VeterinaryBPEL.bpel#//@activity/@activities.0"/>

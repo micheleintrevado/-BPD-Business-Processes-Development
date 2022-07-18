@@ -7,17 +7,18 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * &lt;p&gt;Classe Java per companyTypology.
+ * <p>Classe Java per companyTypology.
  * 
- * &lt;p&gt;Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
- * &lt;pre&gt;
- * &amp;lt;simpleType name="companyTypology"&amp;gt;
- *   &amp;lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&amp;gt;
- *     &amp;lt;enumeration value="individual company"/&amp;gt;
- *     &amp;lt;enumeration value="partnership"/&amp;gt;
- *   &amp;lt;/restriction&amp;gt;
- * &amp;lt;/simpleType&amp;gt;
- * &lt;/pre&gt;
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>
+ * <pre>
+ * &lt;simpleType name="companyTypology"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="individual company"/&gt;
+ *     &lt;enumeration value="partnership"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * </pre>
  * 
  */
 @XmlType(name = "companyTypology")
