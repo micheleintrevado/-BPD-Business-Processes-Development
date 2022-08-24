@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per addressDetails complex type.
+ * <p>Java class for addressDetails complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="addressDetails"&gt;
@@ -43,7 +43,7 @@ public class AddressDetails {
     protected int postcode;
 
     /**
-     * Recupera il valore della proprietà city.
+     * Gets the value of the city property.
      * 
      * @return
      *     possible object is
@@ -55,7 +55,7 @@ public class AddressDetails {
     }
 
     /**
-     * Imposta il valore della proprietà city.
+     * Sets the value of the city property.
      * 
      * @param value
      *     allowed object is
@@ -67,7 +67,7 @@ public class AddressDetails {
     }
 
     /**
-     * Recupera il valore della proprietà street.
+     * Gets the value of the street property.
      * 
      * @return
      *     possible object is
@@ -79,7 +79,7 @@ public class AddressDetails {
     }
 
     /**
-     * Imposta il valore della proprietà street.
+     * Sets the value of the street property.
      * 
      * @param value
      *     allowed object is
@@ -91,7 +91,7 @@ public class AddressDetails {
     }
 
     /**
-     * Recupera il valore della proprietà postcode.
+     * Gets the value of the postcode property.
      * 
      */
     public int getPostcode() {
@@ -99,7 +99,7 @@ public class AddressDetails {
     }
 
     /**
-     * Imposta il valore della proprietà postcode.
+     * Sets the value of the postcode property.
      * 
      */
     public void setPostcode(int value) {

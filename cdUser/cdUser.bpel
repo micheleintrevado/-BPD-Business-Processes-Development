@@ -4,21 +4,21 @@
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="propertiesAliases.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/propertiesAliases"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="cdUserArtifacts.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/userArtifacts"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="cdUser.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cduser"/>
-  <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="localhealthcarecompany.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cdlocalhealthcarecompany"/>
+  <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="localhealthcarecompany.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/types"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="municipality.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/services/municipality"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="registryoffice.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="veterinary.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cdveterinary"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="veterinaryregionalregister.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/services/veterinaryregionalregister"/>
   <bpel:partnerLinks>
     <bpel:partnerLink myRole="UserPTRole" name="cduser" partnerLinkType="artifacts:CDUserPTPLT"/>
-    <bpel:partnerLink name="UserLocalHealthcareCompanyPT" partnerLinkType="artifacts:UserLocalHealthcareCompanyPTPLT" partnerRole="UserLocalHealthcareCompanyPTRole"/>
+    <bpel:partnerLink name="LocalHealthcareCompanyPortSoap11" partnerLinkType="LocalHealthcareCompanyPort" partnerRole="farmBusinessStartup"/>
     <bpel:partnerLink myRole="LocalHealthcareCompanyUserPTRole" name="localhealthcarecompany" partnerLinkType="artifacts:CDLocalHealthcareCompanyUserPTPLT"/>
   </bpel:partnerLinks>
   <bpel:variables>
     <bpel:variable messageType="cduser:farmBusinessStartupRequestMessageRequest" name="cdUser_farmBusinessCodeRequest_Input"/>
     <bpel:variable name="choreographyID" type="xsd:string"/>
     <bpel:variable name="participantName" type="xsd:string"/>
-    <bpel:variable messageType="localhealthcarecompany:farmBusinessStartupRequestMessageRequest" name="localHealthcareCompany_farmBusinessCodeRequest_Input"/>
+    <bpel:variable messageType="localhealthcarecompany:farmBusinessStartupRequest" name="localHealthcareCompany_farmBusinessCodeRequest_Input"/>
     <bpel:variable name="LocalHealthcareCompany_participant_name" type="xsd:string"/>
     <bpel:variable name="LocalHealthcareCompany_partnerlink_address" type="xsd:string"/>
     <bpel:variable messageType="cduser:farmBusinessStartupResponseMessageRequest" name="user_farmBusinessCodeAssignment_Input"/>

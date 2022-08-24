@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Classe Java per veterinarySiteInspectionDetails complex type.
+ * <p>Java class for veterinarySiteInspectionDetails complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="veterinarySiteInspectionDetails"&gt;
@@ -70,7 +70,7 @@ public class VeterinarySiteInspectionDetails {
     protected String referenceLegislation;
 
     /**
-     * Recupera il valore della proprietà veterinaryName.
+     * Gets the value of the veterinaryName property.
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Imposta il valore della proprietà veterinaryName.
+     * Sets the value of the veterinaryName property.
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Recupera il valore della proprietà veterinarySurname.
+     * Gets the value of the veterinarySurname property.
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Imposta il valore della proprietà veterinarySurname.
+     * Sets the value of the veterinarySurname property.
      * 
      * @param value
      *     allowed object is
@@ -118,7 +118,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Recupera il valore della proprietà siteAddress.
+     * Gets the value of the siteAddress property.
      * 
      * @return
      *     possible object is
@@ -130,7 +130,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Imposta il valore della proprietà siteAddress.
+     * Sets the value of the siteAddress property.
      * 
      * @param value
      *     allowed object is
@@ -142,7 +142,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Recupera il valore della proprietà farmSurface.
+     * Gets the value of the farmSurface property.
      * 
      */
     public int getFarmSurface() {
@@ -150,7 +150,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Imposta il valore della proprietà farmSurface.
+     * Sets the value of the farmSurface property.
      * 
      */
     public void setFarmSurface(int value) {
@@ -158,7 +158,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Recupera il valore della proprietà productionType.
+     * Gets the value of the productionType property.
      * 
      * @return
      *     possible object is
@@ -170,7 +170,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Imposta il valore della proprietà productionType.
+     * Sets the value of the productionType property.
      * 
      * @param value
      *     allowed object is
@@ -182,7 +182,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Recupera il valore della proprietà breedingMethodologyType.
+     * Gets the value of the breedingMethodologyType property.
      * 
      * @return
      *     possible object is
@@ -194,7 +194,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Imposta il valore della proprietà breedingMethodologyType.
+     * Sets the value of the breedingMethodologyType property.
      * 
      * @param value
      *     allowed object is
@@ -206,7 +206,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Recupera il valore della proprietà siteInspectionDate.
+     * Gets the value of the siteInspectionDate property.
      * 
      * @return
      *     possible object is
@@ -218,7 +218,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Imposta il valore della proprietà siteInspectionDate.
+     * Sets the value of the siteInspectionDate property.
      * 
      * @param value
      *     allowed object is
@@ -230,7 +230,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Recupera il valore della proprietà referenceLegislation.
+     * Gets the value of the referenceLegislation property.
      * 
      * @return
      *     possible object is
@@ -242,7 +242,7 @@ public class VeterinarySiteInspectionDetails {
     }
 
     /**
-     * Imposta il valore della proprietà referenceLegislation.
+     * Sets the value of the referenceLegislation property.
      * 
      * @param value
      *     allowed object is

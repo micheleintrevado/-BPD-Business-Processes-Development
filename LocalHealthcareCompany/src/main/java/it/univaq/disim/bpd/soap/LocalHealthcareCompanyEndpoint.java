@@ -26,7 +26,7 @@ public class LocalHealthcareCompanyEndpoint {
 		System.out.println("Received SOAP message farmBusinessStartupRequest");
 		
 		runtimeService.createMessageCorrelation("farmBusinessStartupRequest")
-				.processInstanceBusinessKey(request.getRequestId())
+				.processInstanceBusinessKey(request.getChoreographyId())
 				.setVariable("farmBusinessStartupRequest", request)
 				.correlate();
 
@@ -37,7 +37,7 @@ public class LocalHealthcareCompanyEndpoint {
 		
 		System.out.println("Received SOAP message farmSiteInspectionResponse");
 		runtimeService.createMessageCorrelation("farmSiteInspectionResponse")
-				.processInstanceBusinessKey(request.getRequestId())
+				.processInstanceBusinessKey(request.getChoreographyId())
 				.setVariable("farmSiteInspectionResponse", request)
 				.correlate();
 

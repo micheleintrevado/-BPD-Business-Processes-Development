@@ -232,17 +232,17 @@
   </wsdl:binding>
   <wsdl:service name="RegistryOfficeLocalHealthcareCompanyService">
     <wsdl:port binding="tns:RegistryOfficeLocalHealthcareCompanyBinding" name="RegistryOfficeLocalHealthcareCompanyPort">
-      <soap:address location="http://localhost:8080/ode/processes/RegistryOfficeLocalHealthcareCompany"/>
+      <soap:address location="http://localhost:7070/LocalHealthcareCompany"/>
     </wsdl:port>
   </wsdl:service>
   <wsdl:service name="UserLocalHealthcareCompanyService">
     <wsdl:port binding="tns:UserLocalHealthcareCompanyBinding" name="UserLocalHealthcareCompanyPort">
-      <soap:address location="http://localhost:8080/ode/processes/UserLocalHealthcareCompany"/>
+      <soap:address location="http://localhost:7070/LocalHealthcareCompany"/>
     </wsdl:port>
   </wsdl:service>
   <wsdl:service name="VeterinaryLocalHealthcareCompanyService">
     <wsdl:port binding="tns:VeterinaryLocalHealthcareCompanyBinding" name="VeterinaryLocalHealthcareCompanyPort">
-      <soap:address location="http://localhost:8080/ode/processes/VeterinaryLocalHealthcareCompany"/>
+      <soap:address location="http://localhost:7070/LocalHealthcareCompany"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

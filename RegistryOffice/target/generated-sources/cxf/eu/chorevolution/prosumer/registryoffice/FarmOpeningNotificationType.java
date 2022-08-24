@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per farmOpeningNotificationType complex type.
+ * <p>Java class for farmOpeningNotificationType complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="farmOpeningNotificationType"&gt;
@@ -56,7 +56,7 @@ public class FarmOpeningNotificationType {
     protected FarmOpeningNotification inputMessageData;
 
     /**
-     * Recupera il valore della proprietà choreographyId.
+     * Gets the value of the choreographyId property.
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Imposta il valore della proprietà choreographyId.
+     * Sets the value of the choreographyId property.
      * 
      * @param value
      *     allowed object is
@@ -80,7 +80,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Recupera il valore della proprietà senderParticipantName.
+     * Gets the value of the senderParticipantName property.
      * 
      * @return
      *     possible object is
@@ -92,7 +92,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Imposta il valore della proprietà senderParticipantName.
+     * Sets the value of the senderParticipantName property.
      * 
      * @param value
      *     allowed object is
@@ -104,7 +104,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Recupera il valore della proprietà receiverParticipantName.
+     * Gets the value of the receiverParticipantName property.
      * 
      * @return
      *     possible object is
@@ -116,7 +116,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Imposta il valore della proprietà receiverParticipantName.
+     * Sets the value of the receiverParticipantName property.
      * 
      * @param value
      *     allowed object is
@@ -128,7 +128,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Recupera il valore della proprietà choreographyTaskName.
+     * Gets the value of the choreographyTaskName property.
      * 
      * @return
      *     possible object is
@@ -140,7 +140,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Imposta il valore della proprietà choreographyTaskName.
+     * Sets the value of the choreographyTaskName property.
      * 
      * @param value
      *     allowed object is
@@ -152,7 +152,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Recupera il valore della proprietà inputMessageName.
+     * Gets the value of the inputMessageName property.
      * 
      * @return
      *     possible object is
@@ -164,7 +164,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Imposta il valore della proprietà inputMessageName.
+     * Sets the value of the inputMessageName property.
      * 
      * @param value
      *     allowed object is
@@ -176,7 +176,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Recupera il valore della proprietà inputMessageData.
+     * Gets the value of the inputMessageData property.
      * 
      * @return
      *     possible object is
@@ -188,7 +188,7 @@ public class FarmOpeningNotificationType {
     }
 
     /**
-     * Imposta il valore della proprietà inputMessageData.
+     * Sets the value of the inputMessageData property.
      * 
      * @param value
      *     allowed object is

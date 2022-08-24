@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per farmDetails complex type.
+ * <p>Java class for farmDetails complex type.
  * 
- * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="farmDetails"&gt;
@@ -75,7 +75,7 @@ public class FarmDetails {
     protected BreedingMethodTypology breedingMethodologyType;
 
     /**
-     * Recupera il valore della proprietà farmName.
+     * Gets the value of the farmName property.
      * 
      * @return
      *     possible object is
@@ -87,7 +87,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà farmName.
+     * Sets the value of the farmName property.
      * 
      * @param value
      *     allowed object is
@@ -99,7 +99,7 @@ public class FarmDetails {
     }
 
     /**
-     * Recupera il valore della proprietà companyName.
+     * Gets the value of the companyName property.
      * 
      * @return
      *     possible object is
@@ -111,7 +111,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà companyName.
+     * Sets the value of the companyName property.
      * 
      * @param value
      *     allowed object is
@@ -123,7 +123,7 @@ public class FarmDetails {
     }
 
     /**
-     * Recupera il valore della proprietà companyType.
+     * Gets the value of the companyType property.
      * 
      * @return
      *     possible object is
@@ -135,7 +135,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà companyType.
+     * Sets the value of the companyType property.
      * 
      * @param value
      *     allowed object is
@@ -147,7 +147,7 @@ public class FarmDetails {
     }
 
     /**
-     * Recupera il valore della proprietà companyHeadquarter.
+     * Gets the value of the companyHeadquarter property.
      * 
      * @return
      *     possible object is
@@ -159,7 +159,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà companyHeadquarter.
+     * Sets the value of the companyHeadquarter property.
      * 
      * @param value
      *     allowed object is
@@ -171,7 +171,7 @@ public class FarmDetails {
     }
 
     /**
-     * Recupera il valore della proprietà farmSurface.
+     * Gets the value of the farmSurface property.
      * 
      */
     public int getFarmSurface() {
@@ -179,7 +179,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà farmSurface.
+     * Sets the value of the farmSurface property.
      * 
      */
     public void setFarmSurface(int value) {
@@ -187,7 +187,7 @@ public class FarmDetails {
     }
 
     /**
-     * Recupera il valore della proprietà phoneNumber.
+     * Gets the value of the phoneNumber property.
      * 
      * @return
      *     possible object is
@@ -199,7 +199,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà phoneNumber.
+     * Sets the value of the phoneNumber property.
      * 
      * @param value
      *     allowed object is
@@ -211,7 +211,7 @@ public class FarmDetails {
     }
 
     /**
-     * Recupera il valore della proprietà email.
+     * Gets the value of the email property.
      * 
      * @return
      *     possible object is
@@ -223,7 +223,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà email.
+     * Sets the value of the email property.
      * 
      * @param value
      *     allowed object is
@@ -235,7 +235,7 @@ public class FarmDetails {
     }
 
     /**
-     * Recupera il valore della proprietà vatNumber.
+     * Gets the value of the vatNumber property.
      * 
      * @return
      *     possible object is
@@ -247,7 +247,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà vatNumber.
+     * Sets the value of the vatNumber property.
      * 
      * @param value
      *     allowed object is
@@ -259,7 +259,7 @@ public class FarmDetails {
     }
 
     /**
-     * Recupera il valore della proprietà productionType.
+     * Gets the value of the productionType property.
      * 
      * @return
      *     possible object is
@@ -271,7 +271,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà productionType.
+     * Sets the value of the productionType property.
      * 
      * @param value
      *     allowed object is
@@ -283,7 +283,7 @@ public class FarmDetails {
     }
 
     /**
-     * Recupera il valore della proprietà breedingMethodologyType.
+     * Gets the value of the breedingMethodologyType property.
      * 
      * @return
      *     possible object is
@@ -295,7 +295,7 @@ public class FarmDetails {
     }
 
     /**
-     * Imposta il valore della proprietà breedingMethodologyType.
+     * Sets the value of the breedingMethodologyType property.
      * 
      * @param value
      *     allowed object is

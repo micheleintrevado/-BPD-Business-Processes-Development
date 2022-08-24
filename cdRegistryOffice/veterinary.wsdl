@@ -202,7 +202,7 @@
   </wsdl:binding>
   <wsdl:service name="LocalHealthcareCompanyVeterinaryService">
     <wsdl:port binding="tns:LocalHealthcareCompanyVeterinaryBinding" name="LocalHealthcareCompanyVeterinaryPort">
-      <soap:address location="http://localhost:8080/ode/processes/LocalHealthcareCompanyVeterinary"/>
+      <soap:address location="http://localhost:7070/LocalHealthcareCompany"/>
     </wsdl:port>
   </wsdl:service>
   <wsdl:service name="RegistryOfficeVeterinaryService">

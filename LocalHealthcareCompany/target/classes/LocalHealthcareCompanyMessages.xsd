@@ -5,7 +5,7 @@
 	<xsd:element name="farmBusinessStartupRequest">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="requestId" type="xsd:string"/>
+				<xsd:element name="choreographyId" type="xsd:string"/>
 				<xsd:element name="farmBusinessStartupRequestForm"
 					type="tns:farmBusinessStartupRequestFormDetails" />
 			</xsd:sequence>
@@ -83,7 +83,7 @@
 	<xsd:element name="farmSiteInspectionRequest">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="requestId" type="xsd:string"/>
+				<xsd:element name="choreographyId" type="xsd:string"/>
 				<xsd:element name="siteInspectionVerbal" type="tns:veterinarySiteInspectionDetails" />
 			</xsd:sequence>
 		</xsd:complexType>
