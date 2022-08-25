@@ -1,6 +1,6 @@
-<xsd:schema xmlns="http://eu.chorevolution.farmbusinessstartup/types"
-	xmlns:tns="http://eu.chorevolution.farmbusinessstartup/types"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://eu.chorevolution.farmbusinessstartup/types">
+<xsd:schema xmlns="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"
+	xmlns:tns="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany">
 
 	<xsd:element name="farmBusinessStartupRequest">
 		<xsd:complexType>

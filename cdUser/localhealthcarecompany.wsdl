@@ -1,14 +1,17 @@
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-	xmlns:sch="http://eu.chorevolution.farmbusinessstartup/types"
+	xmlns:sch="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://eu.chorevolution.farmbusinessstartup/types"
 	targetNamespace="http://eu.chorevolution.farmbusinessstartup/types">
 	<wsdl:types>
-		<xsd:schema xmlns="http://eu.chorevolution.farmbusinessstartup/types"
-			xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://eu.chorevolution.farmbusinessstartup/types">
+		<xsd:schema
+			xmlns="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"
+			xmlns:tns="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany">
 			<xsd:element name="farmBusinessStartupRequest">
 				<xsd:complexType>
 					<xsd:sequence>
-						<!--<xsd:element name="choreographyId" type="xsd:string" />-->
+						<xsd:element name="choreographyId" type="xsd:string" />
 						<xsd:element name="farmBusinessStartupRequestForm"
 							type="tns:farmBusinessStartupRequestFormDetails" />
 					</xsd:sequence>
@@ -84,7 +87,6 @@
 			</xsd:element>
 			<xsd:complexType name="veterinarySiteInspectionDetails">
 				<xsd:sequence>
-				
 					<xsd:element name="veterinaryName" type="xsd:string" />
 					<xsd:element name="veterinarySurname" type="xsd:string" />
 					<xsd:element name="siteAddress" type="tns:addressDetails" />
@@ -110,11 +112,11 @@
 		</xsd:schema>
 	</wsdl:types>
 	<wsdl:message name="farmSiteInspectionRequest">
-		<wsdl:part element="tns:farmSiteInspectionRequest" name="farmSiteInspectionRequest">
+		<wsdl:part element="sch:farmSiteInspectionRequest" name="farmSiteInspectionRequest">
 		</wsdl:part>
 	</wsdl:message>
 	<wsdl:message name="farmBusinessStartupRequest">
-		<wsdl:part element="tns:farmBusinessStartupRequest" name="farmBusinessStartupRequest">
+		<wsdl:part element="sch:farmBusinessStartupRequest" name="farmBusinessStartupRequest">
 		</wsdl:part>
 	</wsdl:message>
 	<wsdl:portType name="LocalHealthcareCompanyPort">
@@ -148,6 +150,14 @@
 		<wsdl:port binding="tns:LocalHealthcareCompanyPortSoap11"
 			name="LocalHealthcareCompanyPortSoap11">
 			<soap:address location="http://localhost:7070/LocalHealthcareCompany" />
+		</wsdl:port>
+	</wsdl:service>
+
+	<wsdl:service name="UserLocalHealthcareCompanyService">
+		<wsdl:port binding="tns:LocalHealthcareCompanyPortSoap11"
+			name="UserLocalHealthcareCompanyPort">
+			<soap:address
+				location="http://localhost:7070/LocalHealthcareCompany" />
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
