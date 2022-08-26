@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:baseservice="http://services.chorevolution.eu/" xmlns:cdprocess="http://eu.chorevolution.farmbusinessstartup/cd/cdUser/process" xmlns:cduser="http://eu.chorevolution.farmbusinessstartup/cduser" xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/cdlocalhealthcarecompany">
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:baseservice="http://services.chorevolution.eu/" xmlns:cdprocess="http://eu.chorevolution.farmbusinessstartup/cd/cdUser/process" xmlns:cduser="http://eu.chorevolution.farmbusinessstartup/cduser" xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/types">
   <process name="cdprocess:cdUser">
     <active>true</active>
     <retired>false</retired>
@@ -8,10 +8,10 @@
       <service name="cduser:UserService" port="UserPort"/>
     </provide>
     <provide partnerLink="localhealthcarecompany">
-      <service name="cduser:LocalHealthcareCompanyUserService" port="LocalHealthcareCompanyUserPort"/>
+      <service name="cduser:LocalHealthcareCompanyPortSoap11" port="LocalHealthcareCompanyUserPort"/>
     </provide>
-    <invoke partnerLink="UserLocalHealthcareCompanyPT" usePeer2Peer="false">
-      <service name="localhealthcarecompany:UserLocalHealthcareCompanyService" port="UserLocalHealthcareCompanyPort"/>
+    <invoke partnerLink="LocalHealthcareCompanyPort">
+      <service name="localhealthcarecompany:LocalHealthcareCompanyPortService" port="LocalHealthcareCompanyPortSoap11"/>
     </invoke>
   </process>
   <process name="baseservice:BaseService">

@@ -150,6 +150,6 @@
   </extensions>
   <extensions>
     <extendedObject href="cdUser.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1661440725537"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1661521907264"/>
   </extensions>
 </extensionmodel:ExtensionMap>
