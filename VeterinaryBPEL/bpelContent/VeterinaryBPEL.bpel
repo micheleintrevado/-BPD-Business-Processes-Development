@@ -5,10 +5,10 @@
          suppressJoinFailure="yes"
          xmlns:tns="it.univaq.disim.bpd.VeterinaryBPEL"
          xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
-         xmlns:ns="http://it.univaq.disim.bpd.VeterinaryBPEL" xmlns:ns0="http://eu.chorevolution.farmbusinessstartup/veterinary" xmlns:ns1="http://it.univaq.disim.bpd.LocalHealthcareCompanyBPEL">
+         xmlns:ns="http://it.univaq.disim.bpd.VeterinaryBPEL" xmlns:ns0="http://eu.chorevolution.farmbusinessstartup/veterinary" xmlns:ns1="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany">
          
     <!-- Import the client WSDL -->
-    <bpel:import namespace="http://it.univaq.disim.bpd.LocalHealthcareCompanyBPEL" location="LocalHealthcareCompanyBPEL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
+    <bpel:import namespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" location="localhealthcarecompany.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
     <bpel:import namespace="http://eu.chorevolution.farmbusinessstartup/veterinary" location="Veterinary.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
     <bpel:import namespace="http://it.univaq.disim.bpd.VeterinaryBPEL" location="VeterinaryBPEL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"></bpel:import>
     <bpel:import location="VeterinaryBPELArtifacts.wsdl" namespace="it.univaq.disim.bpd.VeterinaryBPEL" 
@@ -20,11 +20,9 @@
     <!-- services integrated within this business process                  -->
     <!-- ================================================================= -->         
     <bpel:partnerLinks>
-        <bpel:partnerLink name="LocalHealthcareCompany" partnerLinkType="tns:LocalHealthcareCompanyPlType" myRole="VeterinaryRole" partnerRole="LocalHealthcareCompanyRole"></bpel:partnerLink>
+        <bpel:partnerLink name="LocalHealthcareCompanyPortSoap11" partnerLinkType="tns:LocalHealthcareCompanyPlType" myRole="VeterinaryRole" partnerRole="LocalHealthcareCompanyPortSoap11"></bpel:partnerLink>
         <bpel:partnerLink name="Veterinary" partnerLinkType="tns:VeterinaryPlType" partnerRole="VeterinaryRole"></bpel:partnerLink>
-        
-        
-        <bpel:partnerLink name="RegistryOffice" partnerLinkType="tns:RegistryOfficePlType" myRole="VeterinaryRole" partnerRole="RegistryOfficeRole"></bpel:partnerLink>
+        <bpel:partnerLink name="RegistryOffice" partnerLinkType="tns:RegistryOfficePlType" myRole="VeterinaryRole" partnerRole="LocalHealthcareCompanyRegistryOfficePort"></bpel:partnerLink>
     </bpel:partnerLinks>
     <bpel:variables>
         <bpel:variable name="FarmSiteInspectionRequest" messageType="ns:farmSiteInspectionRequest"></bpel:variable>
@@ -32,13 +30,13 @@
         <bpel:variable name="FarmSiteInspectionRequestLogic" messageType="ns0:farmSiteInspectionRequestMessageRequest"></bpel:variable>
         <bpel:variable name="SendFarmSiteInspectionResponseResponse" messageType="ns0:sendFarmSiteInspectionResponseMessageResponse"></bpel:variable>
         <bpel:variable name="SendFarmSiteInspectionResponseRequest" messageType="ns0:sendFarmSiteInspectionResponseMessageRequest"></bpel:variable>
-        <bpel:variable name="FarmSiteInspectionVerbalRequest" messageType="ns1:farmSiteInspectionResponse"></bpel:variable>
+        <bpel:variable name="FarmSiteInspectionVerbalRequest" messageType="ns1:farmSiteInspectionResponseElementRequest"></bpel:variable>
         <bpel:variable name="FarmHealthcareRegistrationRequest" messageType="ns:farmRegistrationNotification"></bpel:variable>
         <bpel:variable name="FarmHealthcareRegResponse" messageType="ns0:farmRegistrationNotificationMessageResponse"></bpel:variable>
         <bpel:variable name="FarmHealthcareRegRequest" messageType="ns0:farmRegistrationNotificationMessageRequest"></bpel:variable>
     </bpel:variables>
     <bpel:sequence name="main">
-        <bpel:receive name="ReceiveFarmOpeningSiteInspectionRequest" partnerLink="LocalHealthcareCompany" operation="FarmOpeningSiteInspectionRequest" portType="ns:VeterinaryBpel" variable="FarmSiteInspectionRequest" createInstance="yes"></bpel:receive>
+        <bpel:receive name="ReceiveFarmOpeningSiteInspectionRequest" partnerLink="LocalHealthcareCompanyPortSoap11" operation="FarmOpeningSiteInspectionRequest" portType="ns:VeterinaryBpel" variable="FarmSiteInspectionRequest" createInstance="yes"></bpel:receive>
         
         <bpel:assign validate="no" name="AssignFarmOpeningSiteInspectionRequest">
             <bpel:copy>
@@ -141,7 +139,7 @@
   </siteInspectionVerbal>
 </lhc:farmSiteInspectionResponse>
 </bpel:literal></bpel:from>
-                <bpel:to variable="FarmSiteInspectionVerbalRequest" part="parameters"></bpel:to>
+                <bpel:to variable="FarmSiteInspectionVerbalRequest" part="farmSiteInspectionResponseElementRequest"></bpel:to>
             </bpel:copy>
             
             
@@ -151,7 +149,7 @@
                         <![CDATA[inputMessageData/siteInspectionVerbal]]>
                     </bpel:query>
                 </bpel:from>
-                <bpel:to part="parameters" variable="FarmSiteInspectionVerbalRequest">
+                <bpel:to part="farmSiteInspectionResponseElementRequest" variable="FarmSiteInspectionVerbalRequest">
                     <bpel:query queryLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
                         <![CDATA[siteInspectionVerbal]]>
                     </bpel:query>
