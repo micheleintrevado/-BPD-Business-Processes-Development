@@ -15,18 +15,19 @@ import it.univaq.disim.bpd.domain.FarmSiteInspectionRequest;
 @Endpoint
 public class LocalHealthcareCompanyEndpoint {
 
-	private static final String NAMESPACE_URI = "http://eu.chorevolution.farmbusinessstartup/types";
+	private static final String NAMESPACE_URI = "http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany";
 
 	@Autowired
 	private RuntimeService runtimeService;
 
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "farmBusinessStartupRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "farmBusinessStartupRequestElementRequest")
 	public void requestFarmBusinessCode(@RequestPayload FarmBusinessStartupRequest request) {
 		
 		System.out.println("Received SOAP message farmBusinessStartupRequest");
-		
+		String businessKey = generateRandBusinessKey();
+
 		runtimeService.createMessageCorrelation("farmBusinessStartupRequest")
-				.processInstanceBusinessKey(request.getChoreographyId())
+				.processInstanceBusinessKey(businessKey)
 				.setVariable("farmBusinessStartupRequest", request)
 				.correlate();
 
@@ -34,10 +35,11 @@ public class LocalHealthcareCompanyEndpoint {
 	
 	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "farmSiteInspectionRequest")
 	public void receiveFarmSiteInspectionVerbal(@RequestPayload FarmSiteInspectionRequest request) {
-		
+		String businessKey = generateRandBusinessKey();
+
 		System.out.println("Received SOAP message farmSiteInspectionResponse");
 		runtimeService.createMessageCorrelation("farmSiteInspectionResponse")
-				.processInstanceBusinessKey(request.getChoreographyId())
+				.processInstanceBusinessKey(businessKey)
 				.setVariable("farmSiteInspectionResponse", request)
 				.correlate();
 

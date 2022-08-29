@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<bpel:process xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:artifacts="http://eu.chorevolution.farmbusinessstartup/userArtifacts" xmlns:cduser="http://eu.chorevolution.farmbusinessstartup/cduser" xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/types" xmlns:municipality="http://eu.chorevolution.farmbusinessstartup/services/municipality" xmlns:properties="http://eu.chorevolution.farmbusinessstartup/properties" xmlns:registryoffice="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice" xmlns:veterinary="http://eu.chorevolution.farmbusinessstartup/cdveterinary" xmlns:veterinaryregionalregister="http://eu.chorevolution.farmbusinessstartup/services/veterinaryregionalregister" xmlns:xsd="http://www.w3.org/2001/XMLSchema" exitOnStandardFault="yes" name="cdUser" targetNamespace="http://eu.chorevolution.farmbusinessstartup/cd/cdUser/process">
+<bpel:process xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:artifacts="http://eu.chorevolution.farmbusinessstartup/userArtifacts" xmlns:cduser="http://eu.chorevolution.farmbusinessstartup/cduser" xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" xmlns:municipality="http://eu.chorevolution.farmbusinessstartup/services/municipality" xmlns:properties="http://eu.chorevolution.farmbusinessstartup/properties" xmlns:registryoffice="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice" xmlns:veterinary="http://eu.chorevolution.farmbusinessstartup/cdveterinary" xmlns:veterinaryregionalregister="http://eu.chorevolution.farmbusinessstartup/services/veterinaryregionalregister" xmlns:xsd="http://www.w3.org/2001/XMLSchema" exitOnStandardFault="yes" name="cdUser" targetNamespace="http://eu.chorevolution.farmbusinessstartup/cd/cdUser/process">
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="properties.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/properties"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="propertiesAliases.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/propertiesAliases"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="cdUserArtifacts.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/userArtifacts"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="cdUser.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cduser"/>
-  <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="localhealthcarecompany.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/types"/>
+  <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="localhealthcarecompany.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="municipality.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/services/municipality"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="registryoffice.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice"/>
   <bpel:import importType="http://schemas.xmlsoap.org/wsdl/" location="veterinary.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cdveterinary"/>
@@ -49,7 +49,7 @@
             <bpel:copy>
               <bpel:from>
                 <bpel:literal>
-                  <ns:farmBusinessStartupRequestElementRequest xmlns:ns="http://eu.chorevolution.farmbusinessstartup/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                  <ns:farmBusinessStartupRequestElementRequest xmlns:ns="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <choreographyId><choreographyId>choreographyId1</choreographyId></choreographyId>
     <senderParticipantName>senderParticipantName1</senderParticipantName>
     <receiverParticipantName>receiverParticipantName1</receiverParticipantName>
@@ -151,12 +151,14 @@
               <bpel:to variable="LocalHealthcareCompany_partnerlink_address"/>
             </bpel:copy>
           </bpel:assign>
+          <!--  
           <bpel:assign validate="no">
             <bpel:copy xmlns:siaendpointsmanager="java:eu.chorevolution.cd.utility.sia.endpoints.manager.services.SiaEndpointsManagerService">
               <bpel:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[siaendpointsmanager:getParticipantAddress($participantName,$LocalHealthcareCompany_participant_name,$LocalHealthcareCompany_partnerlink_address)]]></bpel:from>
               <bpel:to partnerLink="LocalHealthcareCompanyPort"/>
             </bpel:copy>
           </bpel:assign>
+          -->
           <bpel:invoke inputVariable="localHealthcareCompany_farmBusinessCodeRequest_Input" name="Invoke_localHealthcareCompany_farmBusinessCodeRequest" operation="farmBusinessStartupRequestElement" partnerLink="LocalHealthcareCompanyPort">
             <bpel:correlations>
               <bpel:correlation initiate="join" set="CorrelationSetChoreographyID"/>

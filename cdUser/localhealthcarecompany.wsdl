@@ -1,7 +1,7 @@
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 	xmlns:sch="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"
-	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://eu.chorevolution.farmbusinessstartup/types"
-	targetNamespace="http://eu.chorevolution.farmbusinessstartup/types">
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"
+	targetNamespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany">
 	<wsdl:types>
 		<xsd:schema
 			xmlns="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"

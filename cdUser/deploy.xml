@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:baseservice="http://services.chorevolution.eu/" xmlns:cdprocess="http://eu.chorevolution.farmbusinessstartup/cd/cdUser/process" xmlns:cduser="http://eu.chorevolution.farmbusinessstartup/cduser" xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/types">
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:baseservice="http://services.chorevolution.eu/" xmlns:cdprocess="http://eu.chorevolution.farmbusinessstartup/cd/cdUser/process" xmlns:cduser="http://eu.chorevolution.farmbusinessstartup/cduser" xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany">
   <process name="cdprocess:cdUser">
     <active>true</active>
     <retired>false</retired>
