@@ -121,7 +121,18 @@
     </wsdl:input>
     </wsdl:operation>
   </wsdl:portType>
-  
+  <wsdl:portType name="LocalHealthcareCompanyVeterinaryPT">
+    <wsdl:operation name="farmOpeningSiteInspectionRequest">
+      <wsdl:input message="vet:farmSiteInspectionRequest">
+    </wsdl:input>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="RegistryOfficeVeterinaryPT">
+    <wsdl:operation name="farmHealthcareRegistration">
+      <wsdl:input message="vet:farmRegistrationNotification">
+    </wsdl:input>
+    </wsdl:operation>
+  </wsdl:portType>
   <wsdl:binding name="VeterinaryBpelServiceSoapBinding" type="vet:VeterinaryBpel">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="FarmOpeningSiteInspectionRequest">
@@ -137,7 +148,36 @@
       </wsdl:input>
     </wsdl:operation>
   </wsdl:binding>
+   
+  <wsdl:binding name="RegistryOfficeVeterinaryBinding" type="vet:RegistryOfficeVeterinaryPT">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="farmHealthcareRegistration">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LocalHealthcareCompanyVeterinaryBinding" type="vet:LocalHealthcareCompanyVeterinaryPT">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="farmOpeningSiteInspectionRequest">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
   
+  <wsdl:service name="LocalHealthcareCompanyVeterinaryService">
+    <wsdl:port binding="vet:LocalHealthcareCompanyVeterinaryBinding" name="LocalHealthcareCompanyVeterinaryPort">
+      <soap:address location="http://localhost:8080/ode/processes/LocalHealthcareCompanyVeterinary"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="RegistryOfficeVeterinaryService">
+    <wsdl:port binding="vet:RegistryOfficeVeterinaryBinding" name="RegistryOfficeVeterinaryPort">
+      <soap:address location="http://localhost:8080/ode/processes/RegistryOfficeVeterinary"/>
+    </wsdl:port>
+  </wsdl:service>
   <wsdl:service name="VeterinaryBpelService">
     <wsdl:port name="VeterinaryBpelServicePort" binding="vet:VeterinaryBpelServiceSoapBinding">
       <soap:address location="http://localhost:8080/ode/processes/VeterinaryBpelService"/>

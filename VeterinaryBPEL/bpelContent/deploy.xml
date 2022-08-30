@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03"  xmlns:eu.chorevolution.farmbusinessstartup.cdregistryoffice="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice" xmlns:it.univaq.disim.bpd.VeterinaryBPEL="it.univaq.disim.bpd.VeterinaryBPEL" xmlns:it.univaq.disim.bpd.VeterinaryBPEL_1="http://it.univaq.disim.bpd.VeterinaryBPEL" xmlns:eu.chorevolution.farmbusinessstartup.localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"   xmlns:veterinary="http://eu.chorevolution.farmbusinessstartup/veterinary">
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:cdregistryoffice="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice" xmlns:it.univaq.disim.asose.LocalHealthcareCompanyBPEL="http://it.univaq.disim.asose.LocalHealthcareCompanyBPEL" xmlns:it.univaq.disim.asose.RegistryOfficeBPEL="http://it.univaq.disim.asose.RegistryOfficeBPEL" xmlns:it.univaq.disim.asose.VeterinaryBPEL="it.univaq.disim.asose.VeterinaryBPEL" xmlns:it.univaq.disim.asose.VeterinaryBPEL_1="http://it.univaq.disim.asose.VeterinaryBPEL" xmlns:it.univaq.disim.bpd.VeterinaryBPEL="it.univaq.disim.bpd.VeterinaryBPEL" xmlns:it.univaq.disim.bpd.VeterinaryBPEL_1="http://it.univaq.disim.bpd.VeterinaryBPEL" xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" xmlns:veterinary="http://eu.chorevolution.farmbusinessstartup/veterinary">
   <process name="it.univaq.disim.bpd.VeterinaryBPEL:VeterinaryBPEL">
     <process-events generate="all"/>
     <provide partnerLink="LocalHealthcareCompany">
-      <service name="eu.chorevolution.farmbusinessstartup.localhealthcarecompany:LocalHealthcareCompanyPortService" port="LocalHealthcareCompanyPortSoap11"/>
+      <service name="it.univaq.disim.bpd.VeterinaryBPEL_1:LocalHealthcareCompanyVeterinaryService" port="LocalHealthcareCompanyVeterinaryPort"/>
     </provide>
     <provide partnerLink="RegistryOffice">
-      <service name="eu.chorevolution.farmbusinessstartup.cdregistryoffice:LocalHealthcareCompanyRegistryOfficeService" port="LocalHealthcareCompanyRegistryOfficePort"/>
+      <service name="it.univaq.disim.bpd.VeterinaryBPEL_1:RegistryOfficeVeterinaryService" port="RegistryOfficeVeterinaryPort"/>
     </provide>
     <invoke partnerLink="LocalHealthcareCompany">
-      <service name="eu.chorevolution.farmbusinessstartup.localhealthcarecompany:LocalHealthcareCompanyPortService" port="LocalHealthcareCompanyPortSoap11"/>
+      <service name="localhealthcarecompany:LocalHealthcareCompanyPortService" port="LocalHealthcareCompanyPortSoap11"/>
     </invoke>
     <invoke partnerLink="Veterinary">
       <service name="veterinary:VeterinaryService" port="VeterinaryPort"/>
     </invoke>
     <invoke partnerLink="RegistryOffice">
-      <service name="eu.chorevolution.farmbusinessstartup.cdregistryoffice:LocalHealthcareCompanyRegistryOfficeService" port="LocalHealthcareCompanyRegistryOfficePort"/>
+      <service name="cdregistryoffice:LocalHealthcareCompanyRegistryOfficeService" port="LocalHealthcareCompanyRegistryOfficePort"/>
     </invoke>
   </process>
 </deploy>

@@ -33,7 +33,7 @@ public class LocalHealthcareCompanyEndpoint {
 
 	}
 	
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "farmSiteInspectionRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "farmSiteInspectionResponseElementRequest")
 	public void receiveFarmSiteInspectionVerbal(@RequestPayload FarmSiteInspectionRequest request) {
 		String businessKey = generateRandBusinessKey();
 

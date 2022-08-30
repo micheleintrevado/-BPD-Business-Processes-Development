@@ -29,7 +29,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("LocalHealthcareCompanyPort");
 		wsdl11Definition.setLocationUri("/LocalHealthcareCompany");
-		wsdl11Definition.setTargetNamespace("http://eu.chorevolution.farmbusinessstartup/types");
+		wsdl11Definition.setTargetNamespace("http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany");
 		wsdl11Definition.setSchema(localHealthcareCompanySchema);
 		return wsdl11Definition;
 	}

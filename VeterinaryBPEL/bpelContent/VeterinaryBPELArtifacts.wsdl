@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="it.univaq.disim.bpd.VeterinaryBPEL" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" xmlns:wsdl1="http://it.univaq.disim.bpd.VeterinaryBPEL" xmlns:wsdl2="http://eu.chorevolution.farmbusinessstartup/veterinary" xmlns:wsdl3="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice" name="VeterinaryBPEL" targetNamespace="it.univaq.disim.bpd.VeterinaryBPEL">
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     Gianluca Rea
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
      Michele Intrevado
+     Gianluca Rea
      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
    <plnk:partnerLinkType name="LocalHealthcareCompanyPlType">
-    <plnk:role name="LocalHealthcareCompanyPortSoap11" portType="wsdl:LocalHealthcareCompanyPort"/>
+    <plnk:role name="LocalHealthcareCompanyRole" portType="wsdl1:LocalHealthcareCompanyVeterinaryPT"/>
     <plnk:role name="VeterinaryRole" portType="wsdl1:VeterinaryBpel"/>
   </plnk:partnerLinkType>
     <plnk:partnerLinkType name="VeterinaryPlType">
@@ -14,7 +15,7 @@
   </plnk:partnerLinkType>
     <plnk:partnerLinkType name="RegistryOfficePlType">
     <plnk:role name="VeterinaryRole" portType="wsdl1:VeterinaryBpel"/>
-    <plnk:role name="LocalHealthcareCompanyRegistryOfficePort" portType="wsdl3:LocalHealthcareCompanyRegistryOfficePT"/>
+    <plnk:role name="RegistryOfficeRole" portType="wsdl3:LocalHealthcareCompanyRegistryOfficePT"/>
   </plnk:partnerLinkType>
     <import location="localhealthcarecompany.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"/>
     <import location="VeterinaryBPEL.wsdl" namespace="http://it.univaq.disim.bpd.VeterinaryBPEL"/>
