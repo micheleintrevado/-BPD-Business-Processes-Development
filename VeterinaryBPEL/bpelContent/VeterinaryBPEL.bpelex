@@ -6,7 +6,7 @@
   </extensions>
   <extensions>
     <extendedObject href="VeterinaryBPEL.bpel#/"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1661871870122"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1661959786291"/>
   </extensions>
   <extensions>
     <extendedObject href="VeterinaryBPEL.bpel#//@activity/@activities.0"/>
@@ -19,10 +19,6 @@
   <extensions>
     <extendedObject href="VeterinaryBPEL.bpel#//@activity/@activities.1/@copy.1"/>
     <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
-  </extensions>
-  <extensions>
-    <extendedObject href="VeterinaryBPEL.bpel#//@variables/@children.0"/>
-    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
   </extensions>
   <extensions>
     <extendedObject href="VeterinaryBPEL.bpel#//@activity/@activities.2"/>
@@ -127,5 +123,9 @@
   <extensions>
     <extendedObject href="VeterinaryBPEL.bpel#//@activity/@activities.5/@copy.0"/>
     <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="VeterinaryBPEL.bpel#//@variables/@children.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
   </extensions>
 </extensionmodel:ExtensionMap>
