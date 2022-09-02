@@ -164,8 +164,8 @@
                 </bpel:to>
             </bpel:copy>
         </bpel:assign>
-        
-        <bpel:invoke name="InvokeFarmSiteInspectionVerbal" partnerLink="Veterinary" operation="farmOpeningSiteInspectionRequest" portType="ns0:VeterinaryPT" inputVariable="FarmSiteInspectionRequest"></bpel:invoke>
+        <bpel:invoke name="InvokeFarmSiteInspectionVerbal" partnerLink="LocalHealthcareCompanyVeterinary" operation="farmOpeningSiteInspectionRequest" portType="ns:LocalHealthcareCompanyVeterinaryPT" inputVariable="FarmSiteInspectionRequest"></bpel:invoke>
+        <!-- <bpel:invoke name="InvokeFarmSiteInspectionVerbal" partnerLink="Veterinary" operation="farmOpeningSiteInspectionRequest" portType="ns0:VeterinaryPT" inputVariable="FarmSiteInspectionRequest"></bpel:invoke> -->
         <bpel:receive name="ReceiveFarmHealthcareRegistration" partnerLink="RegistryOffice" operation="FarmHealthcareRegistration" portType="ns:VeterinaryBpel" variable="FarmHealthcareRegistrationRequest"></bpel:receive>
         <bpel:assign validate="no" name="AssignFarmHealthcareRegLogic">
             <bpel:copy>

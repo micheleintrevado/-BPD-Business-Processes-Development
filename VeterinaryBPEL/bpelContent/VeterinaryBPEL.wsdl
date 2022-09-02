@@ -34,15 +34,15 @@
 		</xsd:restriction>
 	</xsd:simpleType>
 
-	<xsd:complexType name="farmSiteInspectionRequest">
-		<xsd:sequence>
-        	<xsd:element name="ChoreographyID" type="xsd:string"></xsd:element>   
-        	<xsd:element name="farmSiteInspectionRequestDetails" type="vet:farmSiteInspectionRequestDetails"></xsd:element>   							
-		</xsd:sequence>
-	</xsd:complexType>
+<!-- 	<xsd:complexType name="farmSiteInspectionRequest"> -->
+<!-- 		<xsd:sequence> -->
+<!--         	<xsd:element name="ChoreographyID" type="xsd:string"></xsd:element>    -->
+<!--         	<xsd:element name="farmSiteInspectionRequestDetails" type="vet:farmSiteInspectionRequestDetails"></xsd:element>   							 -->
+<!-- 		</xsd:sequence> -->
+<!-- 	</xsd:complexType> -->
 	
-	<xsd:complexType name="farmSiteInspectionRequestDetails">
-	
+	<!--  <xsd:complexType name="farmSiteInspectionRequestDetails"> -->
+		<xsd:complexType name="farmSiteInspectionRequest">
 		<xsd:sequence>
 		
 			<xsd:element name="farmName" type="xsd:string"/>  
