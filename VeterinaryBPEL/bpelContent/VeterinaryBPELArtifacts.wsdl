@@ -1,51 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
-	xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
-	xmlns:tns="it.univaq.disim.bpd.VeterinaryBPEL" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
-	xmlns:wsdl="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"
-	xmlns:wsdl1="http://it.univaq.disim.bpd.VeterinaryBPEL" xmlns:wsdl2="http://eu.chorevolution.farmbusinessstartup/veterinary"
-	xmlns:wsdl3="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice"
-	name="VeterinaryBPEL" targetNamespace="it.univaq.disim.bpd.VeterinaryBPEL">
-
-
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+			xmlns:veterinaryBPEL="http://it.univaq.disim.bpd.VeterinaryBPEL" 
+			xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" 
+			xmlns:registryoffice="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice" 
+			xmlns:local="http://it.univaq.disim.bpd.VeterinaryBPELArtifacts" 
+			xmlns:veterinary="http://eu.chorevolution.farmbusinessstartup/veterinary" 
+			targetNamespace="http://it.univaq.disim.bpd.VeterinaryBPELArtifacts">
+			
+  <import location="VeterinaryBPEL.wsdl" namespace="http://it.univaq.disim.bpd.VeterinaryBPEL"/>
+  <import location="localhealthcarecompany.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"/>
+  <import location="cdRegistryOffice.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice"/>
+  <import location="Veterinary.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/veterinary"/>
+  
+  
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-		Michele Intrevado Gianluca Rea ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
-		name="LocalHealthcareCompanyVeterinaryPTPLT">
-		<role name="LocalHealthcareCompanyPort" portType="wsdl:LocalHealthcareCompanyPort" />
-		<role name="VeterinaryRole" portType="wsdl1:VeterinaryBpel"/>
-	</partnerLinkType>
-	<partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
-		name="RegistryOfficeVeterinaryPTPLT">
-		<role name="RegistryOfficeVeterinaryPTRole" portType="wsdl3:LocalHealthcareCompanyRegistryOfficePT" />
-		<role name="VeterinaryRole" portType="wsdl1:VeterinaryBpel"/>
-	</partnerLinkType>
-	<partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
-		name="RegistryOfficeLocalHealthcareCompanyPTPLT">
-		<role name="RegistryOfficeLocalHealthcareCompanyPTRole"
-			portType="wsdl:RegistryOfficeLocalHealthcareCompanyPT" />
-	</partnerLinkType>
-	<partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
-		name="VeterinaryLocalHealthcareCompanyPTPLT"> 
-		<role name="VeterinaryLocalHealthcareCompanyPTRole"
-			portType="wsdl:LocalHealthcareCompanyPort" />
-	</partnerLinkType>
-	<partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
-		name="LocalHealthcareCompanyRegistryOfficePTPLT">
-		<role name="LocalHealthcareCompanyRegistryOfficePTRole"
-			portType="wsdl3:LocalHealthcareCompanyRegistryOfficePT" />
-	</partnerLinkType>
-	<partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
-		name="VeterinaryPTPLT">
-		<role name="VeterinaryPTRole" portType="wsdl2:VeterinaryPT" />
-	</partnerLinkType>
-	<import location="localhealthcarecompany.wsdl"
-		namespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" />
-	<import location="VeterinaryBPEL.wsdl" namespace="http://it.univaq.disim.bpd.VeterinaryBPEL" />
-	<import location="Veterinary.wsdl"
-		namespace="http://eu.chorevolution.farmbusinessstartup/veterinary" />
-	<import location="cdRegistryOffice.wsdl"
-		namespace="http://eu.chorevolution.farmbusinessstartup/cdregistryoffice" />
-	<service name="VeterinaryBPELService">
-	</service>
+		Michele Intrevado Gianluca Rea
+		 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		 
+  <partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="LocalHealthcareCompanyVeterinary">
+    <role name="LocalHealthcareCompanyVeterinaryRole" portType="veterinaryBPEL:LocalHealthcareCompanyVeterinary"/>
+  </partnerLinkType> <!--  --> 
+  
+  <partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="RegistryOfficeVeterinary">
+    <role name="RegistryOfficeVeterinaryRole" portType="veterinaryBPEL:RegistryOfficeVeterinary"/>
+  </partnerLinkType> <!--  --> 
+  
+  <partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="VeterinaryLocalHealthcareCompany">
+    <role name="VeterinaryLocalHealthcareCompanyRole" portType="localhealthcarecompany:LocalHealthcareCompanyPort"/>
+  </partnerLinkType> <!--  --> 
+  
+  <partnerLinkType xmlns="http://docs.oasis-open.org/wsbpel/2.0/plnktype" name="Veterinary">
+    <role name="VeterinaryRole" portType="veterinary:VeterinaryPT"/>
+  </partnerLinkType>  <!--  -->
+  
 </definitions>

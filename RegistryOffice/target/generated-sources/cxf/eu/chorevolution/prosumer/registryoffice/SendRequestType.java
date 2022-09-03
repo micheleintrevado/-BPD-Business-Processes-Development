@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for sendRequestType complex type.
+ * <p>Classe Java per sendRequestType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
  * &lt;complexType name="sendRequestType"&gt;
@@ -52,7 +52,7 @@ public class SendRequestType {
     protected String inputMessageName;
 
     /**
-     * Gets the value of the choreographyId property.
+     * Recupera il valore della proprietà choreographyId.
      * 
      * @return
      *     possible object is
@@ -64,7 +64,7 @@ public class SendRequestType {
     }
 
     /**
-     * Sets the value of the choreographyId property.
+     * Imposta il valore della proprietà choreographyId.
      * 
      * @param value
      *     allowed object is
@@ -76,7 +76,7 @@ public class SendRequestType {
     }
 
     /**
-     * Gets the value of the senderParticipantName property.
+     * Recupera il valore della proprietà senderParticipantName.
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class SendRequestType {
     }
 
     /**
-     * Sets the value of the senderParticipantName property.
+     * Imposta il valore della proprietà senderParticipantName.
      * 
      * @param value
      *     allowed object is
@@ -100,7 +100,7 @@ public class SendRequestType {
     }
 
     /**
-     * Gets the value of the receiverParticipantName property.
+     * Recupera il valore della proprietà receiverParticipantName.
      * 
      * @return
      *     possible object is
@@ -112,7 +112,7 @@ public class SendRequestType {
     }
 
     /**
-     * Sets the value of the receiverParticipantName property.
+     * Imposta il valore della proprietà receiverParticipantName.
      * 
      * @param value
      *     allowed object is
@@ -124,7 +124,7 @@ public class SendRequestType {
     }
 
     /**
-     * Gets the value of the choreographyTaskName property.
+     * Recupera il valore della proprietà choreographyTaskName.
      * 
      * @return
      *     possible object is
@@ -136,7 +136,7 @@ public class SendRequestType {
     }
 
     /**
-     * Sets the value of the choreographyTaskName property.
+     * Imposta il valore della proprietà choreographyTaskName.
      * 
      * @param value
      *     allowed object is
@@ -148,7 +148,7 @@ public class SendRequestType {
     }
 
     /**
-     * Gets the value of the inputMessageName property.
+     * Recupera il valore della proprietà inputMessageName.
      * 
      * @return
      *     possible object is
@@ -160,7 +160,7 @@ public class SendRequestType {
     }
 
     /**
-     * Sets the value of the inputMessageName property.
+     * Imposta il valore della proprietà inputMessageName.
      * 
      * @param value
      *     allowed object is

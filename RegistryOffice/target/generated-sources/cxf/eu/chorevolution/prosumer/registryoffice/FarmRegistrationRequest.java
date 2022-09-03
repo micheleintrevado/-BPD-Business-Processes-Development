@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmRegistrationRequest complex type.
+ * <p>Classe Java per farmRegistrationRequest complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
  * &lt;complexType name="farmRegistrationRequest"&gt;
@@ -44,7 +44,7 @@ public class FarmRegistrationRequest {
     protected VeterinarySiteInspectionDetails siteInspectionDetails;
 
     /**
-     * Gets the value of the owner property.
+     * Recupera il valore della proprietà owner.
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class FarmRegistrationRequest {
     }
 
     /**
-     * Sets the value of the owner property.
+     * Imposta il valore della proprietà owner.
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class FarmRegistrationRequest {
     }
 
     /**
-     * Gets the value of the farm property.
+     * Recupera il valore della proprietà farm.
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class FarmRegistrationRequest {
     }
 
     /**
-     * Sets the value of the farm property.
+     * Imposta il valore della proprietà farm.
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class FarmRegistrationRequest {
     }
 
     /**
-     * Gets the value of the siteInspectionDetails property.
+     * Recupera il valore della proprietà siteInspectionDetails.
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class FarmRegistrationRequest {
     }
 
     /**
-     * Sets the value of the siteInspectionDetails property.
+     * Imposta il valore della proprietà siteInspectionDetails.
      * 
      * @param value
      *     allowed object is

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:localhealthcarecompany="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany" 
+	xmlns:properties="http://it.univaq.disim.bpd.VeterinaryBPEL/properties" 
+	xmlns:tns="http://eu.chorevolution.farmbusinessstartup/propertiesAliases"
+	 xmlns:veterinaryBPEL="http://it.univaq.disim.bpd.VeterinaryBPEL" 
+	 xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
+	  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	  name="propertiesAliases" 
+	  targetNamespace="http://it.univaq.disim.bpd.VeterinaryBPEL/propertiesAliases">
+  <import location="VeterinaryBPEL.wsdl" namespace="http://it.univaq.disim.bpd.VeterinaryBPEL"/>
+  <import location="localhealthcarecompany.wsdl" namespace="http://eu.chorevolution.farmbusinessstartup/localhealthcarecompany"/>
+  <vprop:propertyAlias messageType="veterinaryBPEL:farmSiteInspectionRequestMessageRequest" part="farmSiteInspectionRequestMessageRequest" propertyName="properties:chorID">
+    <vprop:query>choreographyId/choreographyId</vprop:query>
+  </vprop:propertyAlias>
+  <vprop:propertyAlias messageType="veterinaryBPEL:farmRegistrationNotificationMessageRequest" part="farmRegistrationNotificationMessageRequest" propertyName="properties:chorID">
+    <vprop:query>choreographyId/choreographyId</vprop:query>
+  </vprop:propertyAlias>
+  <vprop:propertyAlias messageType="localhealthcarecompany:farmSiteInspectionResponseElementRequest" part="farmSiteInspectionResponseElementRequest" propertyName="properties:chorID">
+    <vprop:query>choreographyId/choreographyId</vprop:query>
+  </vprop:propertyAlias>
+</definitions>

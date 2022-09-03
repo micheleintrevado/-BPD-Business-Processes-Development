@@ -18,6 +18,7 @@ import eu.chorevolution.prosumer.veterinary.business.ChoreographyDataService;
 import eu.chorevolution.prosumer.veterinary.business.ChoreographyInstanceMessagesStore;
 import eu.chorevolution.prosumer.veterinary.business.VeterinaryService;
 
+import eu.chorevolution.prosumer.veterinary.model.ChoreographyLoopIndexes;
 
 @Component(value="VeterinaryPTImpl")
 public class VeterinaryPTImpl implements VeterinaryPT {
@@ -55,9 +56,9 @@ public class VeterinaryPTImpl implements VeterinaryPT {
     @Override
     public FarmSiteInspectionResponseReturnType sendFarmSiteInspectionResponse(SendRequestType parameters) {
     	logger.info("CALLED sendFarmSiteInspectionResponse ON Veterinary");	
-    	ChoreographyInstanceMessagesStore store = choreographyDataService.getChoreographyInstanceMessages(parameters.getChoreographyId().getChoreographyId());
+	    ChoreographyInstanceMessagesStore store = choreographyDataService.getChoreographyInstanceMessages(parameters.getChoreographyId().getChoreographyId());
 		FarmSiteInspectionResponse businessResult = service.createFarmSiteInspectionResponse(store, parameters.getChoreographyTaskName(), parameters.getReceiverParticipantName());
-		store.storeMessage(parameters.getSenderParticipantName(), parameters.getReceiverParticipantName(), parameters.getInputMessageName(), parameters.getChoreographyTaskName(), businessResult);
+    	store.storeMessage(parameters.getSenderParticipantName(), parameters.getReceiverParticipantName(), parameters.getInputMessageName(), parameters.getChoreographyTaskName(), businessResult);
 		FarmSiteInspectionResponseReturnType result = new FarmSiteInspectionResponseReturnType();
 		result.setInputMessageData(businessResult);
 	 

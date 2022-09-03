@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmSiteInspectionRequestType complex type.
+ * <p>Classe Java per farmSiteInspectionRequestType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
  * &lt;complexType name="farmSiteInspectionRequestType"&gt;
@@ -56,7 +56,7 @@ public class FarmSiteInspectionRequestType {
     protected FarmSiteInspectionRequest inputMessageData;
 
     /**
-     * Gets the value of the choreographyId property.
+     * Recupera il valore della proprietà choreographyId.
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Sets the value of the choreographyId property.
+     * Imposta il valore della proprietà choreographyId.
      * 
      * @param value
      *     allowed object is
@@ -80,7 +80,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Gets the value of the senderParticipantName property.
+     * Recupera il valore della proprietà senderParticipantName.
      * 
      * @return
      *     possible object is
@@ -92,7 +92,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Sets the value of the senderParticipantName property.
+     * Imposta il valore della proprietà senderParticipantName.
      * 
      * @param value
      *     allowed object is
@@ -104,7 +104,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Gets the value of the receiverParticipantName property.
+     * Recupera il valore della proprietà receiverParticipantName.
      * 
      * @return
      *     possible object is
@@ -116,7 +116,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Sets the value of the receiverParticipantName property.
+     * Imposta il valore della proprietà receiverParticipantName.
      * 
      * @param value
      *     allowed object is
@@ -128,7 +128,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Gets the value of the choreographyTaskName property.
+     * Recupera il valore della proprietà choreographyTaskName.
      * 
      * @return
      *     possible object is
@@ -140,7 +140,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Sets the value of the choreographyTaskName property.
+     * Imposta il valore della proprietà choreographyTaskName.
      * 
      * @param value
      *     allowed object is
@@ -152,7 +152,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Gets the value of the inputMessageName property.
+     * Recupera il valore della proprietà inputMessageName.
      * 
      * @return
      *     possible object is
@@ -164,7 +164,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Sets the value of the inputMessageName property.
+     * Imposta il valore della proprietà inputMessageName.
      * 
      * @param value
      *     allowed object is
@@ -176,7 +176,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Gets the value of the inputMessageData property.
+     * Recupera il valore della proprietà inputMessageData.
      * 
      * @return
      *     possible object is
@@ -188,7 +188,7 @@ public class FarmSiteInspectionRequestType {
     }
 
     /**
-     * Sets the value of the inputMessageData property.
+     * Imposta il valore della proprietà inputMessageData.
      * 
      * @param value
      *     allowed object is

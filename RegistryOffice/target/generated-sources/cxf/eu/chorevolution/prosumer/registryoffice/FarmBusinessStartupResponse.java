@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmBusinessStartupResponse complex type.
+ * <p>Classe Java per farmBusinessStartupResponse complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
  * &lt;complexType name="farmBusinessStartupResponse"&gt;
@@ -36,7 +36,7 @@ public class FarmBusinessStartupResponse {
     protected String farmCode;
 
     /**
-     * Gets the value of the farmCode property.
+     * Recupera il valore della proprietà farmCode.
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class FarmBusinessStartupResponse {
     }
 
     /**
-     * Sets the value of the farmCode property.
+     * Imposta il valore della proprietà farmCode.
      * 
      * @param value
      *     allowed object is

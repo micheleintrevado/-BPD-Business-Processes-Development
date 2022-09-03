@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmSiteInspectionResponse complex type.
+ * <p>Classe Java per farmSiteInspectionResponse complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
  * &lt;complexType name="farmSiteInspectionResponse"&gt;
@@ -36,7 +36,7 @@ public class FarmSiteInspectionResponse {
     protected VeterinarySiteInspectionDetails siteInspectionVerbal;
 
     /**
-     * Gets the value of the siteInspectionVerbal property.
+     * Recupera il valore della proprietà siteInspectionVerbal.
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class FarmSiteInspectionResponse {
     }
 
     /**
-     * Sets the value of the siteInspectionVerbal property.
+     * Imposta il valore della proprietà siteInspectionVerbal.
      * 
      * @param value
      *     allowed object is

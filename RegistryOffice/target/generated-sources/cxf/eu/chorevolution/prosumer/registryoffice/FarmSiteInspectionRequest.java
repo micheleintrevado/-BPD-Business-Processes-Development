@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for farmSiteInspectionRequest complex type.
+ * <p>Classe Java per farmSiteInspectionRequest complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
  * &lt;complexType name="farmSiteInspectionRequest"&gt;
@@ -66,7 +66,7 @@ public class FarmSiteInspectionRequest {
     protected Date siteInspectionDeadline;
 
     /**
-     * Gets the value of the farmName property.
+     * Recupera il valore della proprietà farmName.
      * 
      * @return
      *     possible object is
@@ -78,7 +78,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Sets the value of the farmName property.
+     * Imposta il valore della proprietà farmName.
      * 
      * @param value
      *     allowed object is
@@ -90,7 +90,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Gets the value of the companyName property.
+     * Recupera il valore della proprietà companyName.
      * 
      * @return
      *     possible object is
@@ -102,7 +102,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Sets the value of the companyName property.
+     * Imposta il valore della proprietà companyName.
      * 
      * @param value
      *     allowed object is
@@ -114,7 +114,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Gets the value of the siteAddress property.
+     * Recupera il valore della proprietà siteAddress.
      * 
      * @return
      *     possible object is
@@ -126,7 +126,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Sets the value of the siteAddress property.
+     * Imposta il valore della proprietà siteAddress.
      * 
      * @param value
      *     allowed object is
@@ -138,7 +138,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Gets the value of the farmSurface property.
+     * Recupera il valore della proprietà farmSurface.
      * 
      */
     public int getFarmSurface() {
@@ -146,7 +146,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Sets the value of the farmSurface property.
+     * Imposta il valore della proprietà farmSurface.
      * 
      */
     public void setFarmSurface(int value) {
@@ -154,7 +154,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Gets the value of the productionType property.
+     * Recupera il valore della proprietà productionType.
      * 
      * @return
      *     possible object is
@@ -166,7 +166,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Sets the value of the productionType property.
+     * Imposta il valore della proprietà productionType.
      * 
      * @param value
      *     allowed object is
@@ -178,7 +178,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Gets the value of the breedingMethodologyType property.
+     * Recupera il valore della proprietà breedingMethodologyType.
      * 
      * @return
      *     possible object is
@@ -190,7 +190,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Sets the value of the breedingMethodologyType property.
+     * Imposta il valore della proprietà breedingMethodologyType.
      * 
      * @param value
      *     allowed object is
@@ -202,7 +202,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Gets the value of the siteInspectionDeadline property.
+     * Recupera il valore della proprietà siteInspectionDeadline.
      * 
      * @return
      *     possible object is
@@ -214,7 +214,7 @@ public class FarmSiteInspectionRequest {
     }
 
     /**
-     * Sets the value of the siteInspectionDeadline property.
+     * Imposta il valore della proprietà siteInspectionDeadline.
      * 
      * @param value
      *     allowed object is

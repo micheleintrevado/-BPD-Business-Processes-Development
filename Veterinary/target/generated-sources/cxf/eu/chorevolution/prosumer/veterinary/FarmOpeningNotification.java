@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for farmOpeningNotification complex type.
+ * <p>Classe Java per farmOpeningNotification complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
  * &lt;complexType name="farmOpeningNotification"&gt;
@@ -40,7 +40,7 @@ public class FarmOpeningNotification {
     protected VeterinarySiteInspectionDetails siteInspectionDetails;
 
     /**
-     * Gets the value of the farmOpeningRequestForm property.
+     * Recupera il valore della proprietà farmOpeningRequestForm.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class FarmOpeningNotification {
     }
 
     /**
-     * Sets the value of the farmOpeningRequestForm property.
+     * Imposta il valore della proprietà farmOpeningRequestForm.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class FarmOpeningNotification {
     }
 
     /**
-     * Gets the value of the siteInspectionDetails property.
+     * Recupera il valore della proprietà siteInspectionDetails.
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class FarmOpeningNotification {
     }
 
     /**
-     * Sets the value of the siteInspectionDetails property.
+     * Imposta il valore della proprietà siteInspectionDetails.
      * 
      * @param value
      *     allowed object is

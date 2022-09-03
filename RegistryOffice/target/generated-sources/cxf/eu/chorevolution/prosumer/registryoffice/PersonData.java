@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for personData complex type.
+ * <p>Classe Java per personData complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
  * &lt;complexType name="personData"&gt;
@@ -56,7 +56,7 @@ public class PersonData {
     protected String fiscalCode;
 
     /**
-     * Gets the value of the name property.
+     * Recupera il valore della proprietà name.
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class PersonData {
     }
 
     /**
-     * Sets the value of the name property.
+     * Imposta il valore della proprietà name.
      * 
      * @param value
      *     allowed object is
@@ -80,7 +80,7 @@ public class PersonData {
     }
 
     /**
-     * Gets the value of the surname property.
+     * Recupera il valore della proprietà surname.
      * 
      * @return
      *     possible object is
@@ -92,7 +92,7 @@ public class PersonData {
     }
 
     /**
-     * Sets the value of the surname property.
+     * Imposta il valore della proprietà surname.
      * 
      * @param value
      *     allowed object is
@@ -104,7 +104,7 @@ public class PersonData {
     }
 
     /**
-     * Gets the value of the address property.
+     * Recupera il valore della proprietà address.
      * 
      * @return
      *     possible object is
@@ -116,7 +116,7 @@ public class PersonData {
     }
 
     /**
-     * Sets the value of the address property.
+     * Imposta il valore della proprietà address.
      * 
      * @param value
      *     allowed object is
@@ -128,7 +128,7 @@ public class PersonData {
     }
 
     /**
-     * Gets the value of the phoneNumber property.
+     * Recupera il valore della proprietà phoneNumber.
      * 
      * @return
      *     possible object is
@@ -140,7 +140,7 @@ public class PersonData {
     }
 
     /**
-     * Sets the value of the phoneNumber property.
+     * Imposta il valore della proprietà phoneNumber.
      * 
      * @param value
      *     allowed object is
@@ -152,7 +152,7 @@ public class PersonData {
     }
 
     /**
-     * Gets the value of the email property.
+     * Recupera il valore della proprietà email.
      * 
      * @return
      *     possible object is
@@ -164,7 +164,7 @@ public class PersonData {
     }
 
     /**
-     * Sets the value of the email property.
+     * Imposta il valore della proprietà email.
      * 
      * @param value
      *     allowed object is
@@ -176,7 +176,7 @@ public class PersonData {
     }
 
     /**
-     * Gets the value of the fiscalCode property.
+     * Recupera il valore della proprietà fiscalCode.
      * 
      * @return
      *     possible object is
@@ -188,7 +188,7 @@ public class PersonData {
     }
 
     /**
-     * Sets the value of the fiscalCode property.
+     * Imposta il valore della proprietà fiscalCode.
      * 
      * @param value
      *     allowed object is

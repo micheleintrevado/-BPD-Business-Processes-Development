@@ -27,7 +27,7 @@ public class LocalHealthcareCompanyEndpoint {
 		String businessKey = generateRandBusinessKey();
 
 		runtimeService.createMessageCorrelation("farmBusinessStartupRequest")
-				.processInstanceBusinessKey(businessKey)
+				.processInstanceBusinessKey("XXXXX")
 				.setVariable("farmBusinessStartupRequest", request)
 				.correlate();
 
@@ -39,7 +39,7 @@ public class LocalHealthcareCompanyEndpoint {
 
 		System.out.println("Received SOAP message farmSiteInspectionResponse");
 		runtimeService.createMessageCorrelation("farmSiteInspectionResponse")
-				.processInstanceBusinessKey(businessKey)
+				.processInstanceBusinessKey("XXXXX")
 				.setVariable("farmSiteInspectionResponse", request)
 				.correlate();
 
@@ -53,7 +53,7 @@ public class LocalHealthcareCompanyEndpoint {
 		String businessKey = generateRandBusinessKey();
 
 		runtimeService.createMessageCorrelation("farmRegistrationNotification")
-				.processInstanceBusinessKey(businessKey)
+				.processInstanceBusinessKey("XXXXX")
 				.setVariable("farmRegistrationNotification", request)
 				.correlate();
 

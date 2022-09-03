@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1wrndud" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.0.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <bpmn:process id="Process_173o0bd" name="LocalHealthcareCompany" isExecutable="true">
-    <bpmn:sequenceFlow id="Flow_0kcsa2u" sourceRef="farmBusinessStartupRequest" targetRef="farmSiteInspectionRequest" />
+    <bpmn:sequenceFlow id="Flow_0kcsa2u" sourceRef="farmBusinessStartupRequest" targetRef="farmOpeningSiteInspectionRequest" />
     <bpmn:sequenceFlow id="Flow_0vcmoos" sourceRef="farmSiteInspectionResponse" targetRef="Activity_1e1xjp2" />
     <bpmn:sequenceFlow id="Flow_1gv08c3" sourceRef="farmRegistrationNotification" targetRef="Activity_1sidxdw" />
     <bpmn:endEvent id="Event_1l74sb2">
@@ -122,11 +122,11 @@
       <bpmn:outgoing>Flow_18p8ga7</bpmn:outgoing>
     </bpmn:sendTask>
     <bpmn:sequenceFlow id="Flow_18p8ga7" sourceRef="Activity_1e1xjp2" targetRef="farmRegistrationNotification" />
-    <bpmn:sendTask id="farmSiteInspectionRequest" name="Request Farm Opening Site Inspection">
+    <bpmn:sendTask id="farmOpeningSiteInspectionRequest" name="Request Farm Opening Site Inspection">
       <bpmn:extensionElements>
         <camunda:connector>
           <camunda:inputOutput>
-            <camunda:inputParameter name="url">http://localhost:8080/ode/processes/VeterinaryBpelService</camunda:inputParameter>
+            <camunda:inputParameter name="url">http://localhost:9090/Veterinary/Veterinary</camunda:inputParameter>
             <camunda:inputParameter name="payload">&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vet="http://eu.chorevolution.farmbusinessstartup/veterinary"&gt;
    &lt;soapenv:Header/&gt;
    &lt;soapenv:Body&gt;
@@ -166,7 +166,7 @@
       <bpmn:incoming>Flow_0kcsa2u</bpmn:incoming>
       <bpmn:outgoing>Flow_0yukcau</bpmn:outgoing>
     </bpmn:sendTask>
-    <bpmn:sequenceFlow id="Flow_0yukcau" sourceRef="farmSiteInspectionRequest" targetRef="farmSiteInspectionResponse" />
+    <bpmn:sequenceFlow id="Flow_0yukcau" sourceRef="farmOpeningSiteInspectionRequest" targetRef="farmSiteInspectionResponse" />
   </bpmn:process>
   <bpmn:message id="Message_2v1lt56" name="farmBusinessStartupRequestElementRequest" />
   <bpmn:message id="Message_3l2fah1" name="farmSiteInspectionResponse" />
@@ -223,7 +223,7 @@
         <dc:Bounds x="590" y="77" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1h8aiq4_di" bpmnElement="farmSiteInspectionRequest">
+      <bpmndi:BPMNShape id="Activity_1h8aiq4_di" bpmnElement="farmOpeningSiteInspectionRequest">
         <dc:Bounds x="270" y="77" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
