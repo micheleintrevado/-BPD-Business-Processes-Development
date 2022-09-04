@@ -21,7 +21,7 @@
   
   <bpel:partnerLinks>
     <bpel:partnerLink myRole="LocalHealthcareCompanyVeterinaryRole" name="LocalHealthcareCompanyVeterinary" partnerLinkType="artifacts:LocalHealthcareCompanyVeterinary"/>
-    <bpel:partnerLink name="Veterinary" partnerLinkType="artifacts:Veterinary" partnerRole="VeterinaryRole"/>
+    <bpel:partnerLink name="VeterinaryPT" partnerLinkType="artifacts:Veterinary" partnerRole="VeterinaryRole"/>
     <bpel:partnerLink name="VeterinaryLocalHealthcareCompany" partnerLinkType="artifacts:VeterinaryLocalHealthcareCompany" partnerRole="VeterinaryLocalHealthcareCompanyRole"/>
     <bpel:partnerLink myRole="RegistryOfficeVeterinaryRole" name="RegistryOfficeVeterinary" partnerLinkType="artifacts:RegistryOfficeVeterinary"/>
   </bpel:partnerLinks>
@@ -147,17 +147,17 @@
           </bpel:assign>
           <bpel:assign validate="no">
             <bpel:copy>
-              <bpel:from endpointReference="partnerRole" partnerLink="Veterinary"/>
+              <bpel:from endpointReference="partnerRole" partnerLink="VeterinaryPT"/>
               <bpel:to variable="VeterinaryPA"/>
             </bpel:copy>
           </bpel:assign>
           <bpel:assign validate="no">
             <bpel:copy xmlns:siaendpointsmanager="java:eu.chorevolution.cd.utility.sia.endpoints.manager.services.SiaEndpointsManagerService">
               <bpel:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[siaendpointsmanager:getParticipantAddress($participantName,$participantName,$VeterinaryPA)]]></bpel:from>
-              <bpel:to partnerLink="Veterinary"/>
+              <bpel:to partnerLink="VeterinaryPT"/>
             </bpel:copy>
           </bpel:assign>
-          <bpel:invoke inputVariable="farmOpeningSiteInspectionRequestInput" name="invokeFarmOpeningSiteInspectionRequest" operation="farmOpeningSiteInspectionRequest" outputVariable="farmOpeningSiteInspectionRequestOutput" partnerLink="Veterinary"/>
+          <bpel:invoke inputVariable="farmOpeningSiteInspectionRequestInput" name="invokeFarmOpeningSiteInspectionRequest" operation="farmOpeningSiteInspectionRequest" outputVariable="farmOpeningSiteInspectionRequestOutput" partnerLink="VeterinaryPT"/>
           <bpel:assign name="assignSendFarmSiteInspectionResponseInput" validate="no">
             <bpel:copy>
               <bpel:from>
@@ -214,17 +214,17 @@
           </bpel:assign>
           <bpel:assign validate="no">
             <bpel:copy>
-              <bpel:from endpointReference="partnerRole" partnerLink="Veterinary"/>
+              <bpel:from endpointReference="partnerRole" partnerLink="VeterinaryPT"/>
               <bpel:to variable="VeterinaryPA"/>
             </bpel:copy>
           </bpel:assign>
           <bpel:assign validate="no">
             <bpel:copy xmlns:siaendpointsmanager="java:eu.chorevolution.cd.utility.sia.endpoints.manager.services.SiaEndpointsManagerService">
               <bpel:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[siaendpointsmanager:getParticipantAddress($participantName,$participantName,$VeterinaryPA)]]></bpel:from>
-              <bpel:to partnerLink="Veterinary"/>
+              <bpel:to partnerLink="VeterinaryPT"/>
             </bpel:copy>
           </bpel:assign>
-          <bpel:invoke inputVariable="sendFarmSiteInspectionResponseInput" name="invokeSendFarmSiteInspectionResponse" operation="sendFarmSiteInspectionResponse" outputVariable="sendFarmSiteInspectionResponseOutput" partnerLink="Veterinary"/>
+          <bpel:invoke inputVariable="sendFarmSiteInspectionResponseInput" name="invokeSendFarmSiteInspectionResponse" operation="sendFarmSiteInspectionResponse" outputVariable="sendFarmSiteInspectionResponseOutput" partnerLink="VeterinaryPT"/>
           <bpel:assign name="assignFarmSiteInspectionVerbalInput" validate="no">
             <bpel:copy>
               <bpel:from>
@@ -411,17 +411,17 @@
           </bpel:assign>
           <bpel:assign validate="no">
             <bpel:copy>
-              <bpel:from endpointReference="partnerRole" partnerLink="Veterinary"/>
+              <bpel:from endpointReference="partnerRole" partnerLink="VeterinaryPT"/>
               <bpel:to variable="VeterinaryPA"/>
             </bpel:copy>
           </bpel:assign>
           <bpel:assign validate="no">
             <bpel:copy xmlns:siaendpointsmanager="java:eu.chorevolution.cd.utility.sia.endpoints.manager.services.SiaEndpointsManagerService">
               <bpel:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[siaendpointsmanager:getParticipantAddress($participantName,$participantName,$VeterinaryPA)]]></bpel:from>
-              <bpel:to partnerLink="Veterinary"/>
+              <bpel:to partnerLink="VeterinaryPT"/>
             </bpel:copy>
           </bpel:assign>
-          <bpel:invoke inputVariable="farmHealthcareRegistrationInput" name="Invoke_veterinary_farmHealthcareRegistration" operation="farmHealthcareRegistration" outputVariable="farmHealthcareRegistrationOutput" partnerLink="Veterinary"/>
+          <bpel:invoke inputVariable="farmHealthcareRegistrationInput" name="Invoke_veterinary_farmHealthcareRegistration" operation="farmHealthcareRegistration" outputVariable="farmHealthcareRegistrationOutput" partnerLink="VeterinaryPT"/>
         </bpel:sequence>
       </bpel:onMessage>
     </bpel:pick>

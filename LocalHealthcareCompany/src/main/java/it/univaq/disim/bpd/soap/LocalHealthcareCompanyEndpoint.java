@@ -37,10 +37,10 @@ public class LocalHealthcareCompanyEndpoint {
 	public void receiveFarmSiteInspectionVerbal(@RequestPayload FarmSiteInspectionRequest request) {
 		String businessKey = generateRandBusinessKey();
 
-		System.out.println("Received SOAP message farmSiteInspectionResponse");
-		runtimeService.createMessageCorrelation("farmSiteInspectionResponse")
+		System.out.println("Received SOAP message farmSiteInspectionResponseElementRequest");
+		runtimeService.createMessageCorrelation("farmSiteInspectionResponseElementRequest")
 				.processInstanceBusinessKey("XXXXX")
-				.setVariable("farmSiteInspectionResponse", request)
+				.setVariable("farmSiteInspectionResponseElementRequest", request)
 				.correlate();
 
 	}

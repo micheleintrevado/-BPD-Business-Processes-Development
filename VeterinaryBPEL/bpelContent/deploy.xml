@@ -8,7 +8,7 @@
     <provide partnerLink="RegistryOfficeVeterinary">
       <service name="it.univaq.disim.bpd.VeterinaryBPEL:RegistryOfficeVeterinaryService" port="RegistryOfficeVeterinaryPort"/>
     </provide>
-    <invoke partnerLink="Veterinary">
+    <invoke partnerLink="VeterinaryPT">
       <service name="veterinary:VeterinaryService" port="VeterinaryPort"/>
     </invoke>
     <invoke partnerLink="VeterinaryLocalHealthcareCompany">
